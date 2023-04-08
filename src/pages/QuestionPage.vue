@@ -1,31 +1,39 @@
 <template>
     <section>
-        <div class="questions">
-            <question-card class="question"></question-card>
-            <question-card class="question"></question-card>
+        <div class="questions" v-for="(question, index) in terminalQuestions" :key="index">
+            <question-card 
+                class="question" 
+                :questionNumber="index + 1"
+                :questionText="terminalQuestions[index].question"
+                :answer="terminalQuestions[index].answer"
+                ></question-card>
         </div>
     </section>
 </template>
 
 <script>
 import QuestionCard from '../components/QuestionCard.vue';
+import terminalQuestions from '../questions/Terminal';
 export default {
-    components: { QuestionCard }
+    components: { QuestionCard },
+    data() {
+        return {
+            terminalQuestions
+        };
+    },
 }
 </script>
 
 <style>
-
-.questions{
+.questions {
     width: 80%;
     margin: auto;
     margin-top: 50px;
 }
 
-.question{
+.question {
     width: 60%;
     margin: auto;
     margin-bottom: 20px;
 }
-
 </style>

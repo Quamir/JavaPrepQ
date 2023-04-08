@@ -51,9 +51,9 @@ section {
 
     &__text{
         font-size: rem(40);
-        font-weight: 500;
+        font-weight: 600;
         height: 100%;
-
+        padding-top: 8px;
     }
 }
 </style>
