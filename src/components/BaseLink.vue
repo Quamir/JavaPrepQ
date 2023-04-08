@@ -1,9 +1,9 @@
 <template>
-    <div class="base-link">
-        <p>
+    <a href="#/question/terminal"> 
+        <div class="base-link">
             <slot></slot>
-        </p>
-    </div>
+        </div>
+    </a>
 </template>
 
 <style lang="scss" scoped>

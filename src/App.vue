@@ -25,4 +25,9 @@ export default {
   color: #2c3e50;
   margin-top: 0;
 }
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
 </style>

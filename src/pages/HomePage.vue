@@ -44,6 +44,16 @@ section {
 
     &__link{
        width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    &__text{
+        font-size: rem(40);
+        font-weight: 500;
+        height: 100%;
+
     }
 }
 </style>
