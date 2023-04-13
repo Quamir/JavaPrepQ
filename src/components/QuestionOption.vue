@@ -18,24 +18,31 @@ export default {
         optionIndex: {
             type: Number,
             required: true
+        },
+        questionNumber: {
+            type: Number,
+            required: true
         }
     },
     data() {
         return {
             isClicked: false,
-            randomIndex: 0
+            randomIndex: 0,
         };
     },
     methods: {
         handleClick() {
             this.isClicked = !this.isClicked;
+            this.isCorrect = this.optionsArray[this.optionIndex] === this.$parent.answer;
             this.$emit('option-clicked', this);
+            this.$emit('answer-selected', this.isCorrect);
+            console.log(this.questionNumber);
+            console.log(this.isClicked);
         },
     },
 
     created() {
         this.randomIndex = Math.floor(Math.random() * this.optionsArray.length);
-        console.log(this.optionsArray);
     }
 }
 </script>

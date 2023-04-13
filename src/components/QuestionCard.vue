@@ -4,14 +4,27 @@
             <div class="question__number">
                 <p>Question {{ questionNumber }}</p>
             </div>
-            <div class="question__question">
+            <div 
+                class="question__question" 
+                :class="{ 'wraning': answerWarning, 'answer-correct' : answerCorrect }"
+            >
                 <p>{{ questionText }}</p>
             </div>
             <div class="question__question-wrapper" v-for="(question, index) in optionsArray" :key="index">
-                <question-option ref="questionOptions" class="question__option" @option-clicked="handleOptionClicked"
+                <question-option 
+                    ref="questionOptions" 
+                    class="question__option" 
+                    @option-clicked="handleOptionClicked"
+                    @answer-selected="handleAnswerSelected"
                     :optionsArray="optionsArray"
+                    :questionNumber="questionNumber"
                     :optionIndex="index"
                 ></question-option>
+            </div>
+            <div 
+                class="question__explanation" 
+                :class="{'question__explanation--graded' : answerCorrect || answerWarning}">
+                <p> your wrong </p>
             </div>
         </div>
     </div>
@@ -40,7 +53,8 @@ export default {
     data() {
         return {
             terminalQuestions,
-
+            answerWarning : false,
+            answerCorrect : false
         };
     },
     computed: {
@@ -69,6 +83,14 @@ export default {
                     option.isClicked = false;
                 }
             });
+            this.$emit('question-option-clicked', clickedOption);
+        },
+        handleAnswerSelected(isCorrect){
+            if(isCorrect){
+                alert("Correct answer selected");
+            }else{
+                alert("Incorrect answer selected");
+            }
         },
         getUniqueRandomIndexes(num, maxIndex) {
             const indexes = new Set();
@@ -78,9 +100,23 @@ export default {
             }
             return Array.from(indexes);
         },
+        gradeTest(){
+            let correctAnswers = 0;
+            this.$refs.questionOptions.forEach((option) => {
+               if(option.isCorrect && option.isClicked){
+                    correctAnswers++;
+                    this.answerCorrect = true;
+               }else if(!option.isCorrect && option.isClicked){
+                    this.wrongAnswerWarning();
+               }
+            });
+            return correctAnswers;
+        },
+        wrongAnswerWarning(){
+            this.answerWarning = true;
+        }
     },
 };
-
 </script>
 
 <style lang="scss" scoped>
@@ -129,5 +165,26 @@ export default {
     &__option {
         margin-bottom: 15px;
     }
+
+    &__explanation{
+        visibility: hidden;
+        &--graded{
+            visibility: visible;
+            margin: auto auto auto 100px;
+            width: 80%;
+            height: 150px;
+            background-color: #ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.wraning{
+    background-color: red;
+}
+.answer-correct{
+    background-color: $light-green;
 }
 </style>
