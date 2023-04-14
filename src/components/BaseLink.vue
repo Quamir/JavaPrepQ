@@ -1,10 +1,21 @@
 <template>
-    <a href="#/question/terminal"> 
-        <div class="base-link">
+    <a :href="'#/' + linkPath" class="base-link"> 
+        <div>
             <slot></slot>
         </div>
     </a>
 </template>
+
+<script>
+export default {
+    props: {
+        linkPath: {
+            type: String,
+            required: true
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
     .base-link{

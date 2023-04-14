@@ -10,6 +10,7 @@
             >
                 <p>{{ questionText }}</p>
             </div>
+            <img v-if="questionImg != ''" :src="questionImg" alt="image for question">
             <div class="question__question-wrapper" v-for="(question, index) in optionsArray" :key="index">
                 <question-option 
                     ref="questionOptions" 
@@ -19,12 +20,15 @@
                     :optionsArray="optionsArray"
                     :questionNumber="questionNumber"
                     :optionIndex="index"
+                    :test-graded="testGraded"
                 ></question-option>
             </div>
             <div 
                 class="question__explanation" 
-                :class="{'question__explanation--graded' : answerCorrect || answerWarning}">
-                <p> your wrong </p>
+                :class="{'question__explanation--graded' : answerCorrect || answerWarning}"
+            >
+                <span>Explanation</span>
+                <p> {{ explanation }} </p>
             </div>
         </div>
     </div>
@@ -32,7 +36,6 @@
 
 <script>
 import QuestionOption from '../components/QuestionOption.vue';
-import terminalQuestions from '../questions/Terminal';
 
 export default {
     components: { QuestionOption },
@@ -48,23 +51,36 @@ export default {
         answer: {
             type: String,
             required: true
+        },
+        explanation: {
+            type: String,
+            required: true
+        },
+        testQuestions: {
+            type: Array,
+            required: true
+        },
+        questionImg: {
+            type: String,
+            requuired: true
         }
     },
     data() {
         return {
-            terminalQuestions,
+            questions : this.testQuestions,
             answerWarning : false,
-            answerCorrect : false
+            answerCorrect : false,
+            testGraded : false,
         };
     },
     computed: {
         optionsArray() {
             let options = [];
-            let tempTerminalQuestions = this.terminalQuestions.filter(q => q.answer !== this.answer);
-            const uniqueRandomIndexes = this.getUniqueRandomIndexes(3, tempTerminalQuestions.length - 1);
+            let tempquestions = this.questions.filter(q => q.answer !== this.answer);
+            const uniqueRandomIndexes = this.getUniqueRandomIndexes(3, tempquestions.length - 1);
 
             for (let i = 0; i < uniqueRandomIndexes.length; i++) {
-                options.push(tempTerminalQuestions[uniqueRandomIndexes[i]].answer);
+                options.push(tempquestions[uniqueRandomIndexes[i]].answer);
             }
             options.push(this.answer);
 
@@ -75,22 +91,17 @@ export default {
         }
     },
     created() {
+       
     },
     methods: {
         handleOptionClicked(clickedOption) {
             this.$refs.questionOptions.forEach((option) => {
                 if (option !== clickedOption) {
                     option.isClicked = false;
+                }else{
+                this.$emit('question-option-clicked', clickedOption);
                 }
             });
-            this.$emit('question-option-clicked', clickedOption);
-        },
-        handleAnswerSelected(isCorrect){
-            if(isCorrect){
-                alert("Correct answer selected");
-            }else{
-                alert("Incorrect answer selected");
-            }
         },
         getUniqueRandomIndexes(num, maxIndex) {
             const indexes = new Set();
@@ -107,13 +118,19 @@ export default {
                     correctAnswers++;
                     this.answerCorrect = true;
                }else if(!option.isCorrect && option.isClicked){
-                    this.wrongAnswerWarning();
+                    this.answerWarning = true;
                }
             });
+            this.testGraded = true;
             return correctAnswers;
         },
-        wrongAnswerWarning(){
-            this.answerWarning = true;
+        restartTest(){
+            this.$refs.questionOptions.forEach((option) => {
+                this.answerCorrect = false;
+                this.answerWarning = false;
+                this.testGraded = false;
+                option.testRestart(true);
+            });
         }
     },
 };
@@ -170,14 +187,23 @@ export default {
         visibility: hidden;
         &--graded{
             visibility: visible;
+            display: flex;
+            font-size: rem(20);
+            font-weight: bold;
+            flex-direction: column;
             margin: auto auto auto 100px;
             width: 80%;
-            height: 150px;
-            background-color: #ffff;
+            min-height: 150px;
+            background-color: $light-green;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+    }
+
+    img{
+        width: 100%;
+        height: 600px;
     }
 }
 

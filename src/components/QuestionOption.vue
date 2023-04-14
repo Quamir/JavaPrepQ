@@ -22,7 +22,11 @@ export default {
         questionNumber: {
             type: Number,
             required: true
-        }
+        },
+        testGraded:{
+            type: Boolean,
+            required: true
+        },
     },
     data() {
         return {
@@ -32,13 +36,20 @@ export default {
     },
     methods: {
         handleClick() {
+          if(this.testGraded){
+            return
+          }else{
             this.isClicked = !this.isClicked;
             this.isCorrect = this.optionsArray[this.optionIndex] === this.$parent.answer;
             this.$emit('option-clicked', this);
             this.$emit('answer-selected', this.isCorrect);
             console.log(this.questionNumber);
             console.log(this.isClicked);
+          }
         },
+        testRestart(){
+            this.isClicked = false;
+        }
     },
 
     created() {
@@ -73,6 +84,11 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        & p{
+            font-size: rem(20);
+            font-weight: bold;
+        }
     }
 }
 

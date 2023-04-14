@@ -1,9 +1,9 @@
 <template>
   <header>
-    <div class="header-left">
+    <router-link to="/" class="header-left">
       <h2 class="header-left__title">Enjoy the Vue</h2>
       <img src="../assets/vuelogo.png" alt="" class="header-left__icon" />
-    </div>
+    </router-link>
     <div class="header-right">
       <img src="../assets/amazonlogo.png" alt="" class="header-right__icon" />
     </div>
@@ -41,14 +41,18 @@ header {
     justify-content: space-between;
     width: 20%;
 
+    &:hover{
+      cursor: pointer;
+    }
+
     &__title{
-        padding-top: 15px;
-        padding-left: 15px;
+      padding-top: 15px;
+      padding-left: 15px;
     }
 
     &__icon{
-        padding-top: 5px;
-        margin-right: 70px;
+      padding-top: 5px;
+      margin-right: 70px;
     }
     
     
