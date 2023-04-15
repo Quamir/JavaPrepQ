@@ -32,11 +32,11 @@ export default {
   },
   methods : {
     renderTopics(){
-        let pageName = this.getPageName();
-        if(pageName == 'qnotes'){
-            this.topicsArray = qnotes;
-            return pageName;
-        }
+      let pageName = this.getPageName();
+      if(pageName == 'qnotes'){
+          this.topicsArray = qnotes;
+          return pageName;
+      }
     },
   },
   created(){
@@ -67,21 +67,26 @@ section {
 }
 
 .topics{
-    width: 50%;
+    width: 98%;
+    height: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
 
     &__link{
-      width: 100%;
+      width: 20%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 40px;
+      margin-right: 15px;
     }
 
     &__text{
-      font-size: rem(40);
+      font-size: rem(25);
       font-weight: 600;
       height: 100%;
       padding-top: 8px;

@@ -4,10 +4,7 @@
             <div class="question__number">
                 <p>Question {{ questionNumber }}</p>
             </div>
-            <div 
-                class="question__question" 
-                :class="{ 'wraning': answerWarning, 'answer-correct' : answerCorrect }"
-            >
+            <div class="question__question" :class="{ 'wraning': answerWarning, 'answer-correct': answerCorrect }">
                 <p>{{ questionText }}</p>
             </div>
             <img v-if="questionImg != ''" :src="questionImg" alt="image for question">
@@ -16,17 +13,13 @@
                     ref="questionOptions" 
                     class="question__option" 
                     @option-clicked="handleOptionClicked"
-                    @answer-selected="handleAnswerSelected"
-                    :optionsArray="optionsArray"
+                    :optionsArray="optionsArray" 
                     :questionNumber="questionNumber"
-                    :optionIndex="index"
+                    :optionIndex="index" 
                     :test-graded="testGraded"
-                ></question-option>
+                    ></question-option>
             </div>
-            <div 
-                class="question__explanation" 
-                :class="{'question__explanation--graded' : answerCorrect || answerWarning}"
-            >
+            <div class="question__explanation" :class="{ 'question__explanation--graded': answerCorrect || answerWarning }">
                 <span>Explanation</span>
                 <p> {{ explanation }} </p>
             </div>
@@ -67,10 +60,10 @@ export default {
     },
     data() {
         return {
-            questions : this.testQuestions,
-            answerWarning : false,
-            answerCorrect : false,
-            testGraded : false,
+            questions: this.testQuestions,
+            answerWarning: false,
+            answerCorrect: false,
+            testGraded: false,
         };
     },
     computed: {
@@ -82,7 +75,11 @@ export default {
             for (let i = 0; i < uniqueRandomIndexes.length; i++) {
                 options.push(tempquestions[uniqueRandomIndexes[i]].answer);
             }
-            options.push(this.answer);
+
+            // Check if the answer is already in the options array.
+            if (!options.includes(this.answer)) {
+                options.push(this.answer);
+            }
 
             // Shuffle the options
             options.sort(() => Math.random() - 0.5);
@@ -91,15 +88,15 @@ export default {
         }
     },
     created() {
-       
+
     },
     methods: {
         handleOptionClicked(clickedOption) {
             this.$refs.questionOptions.forEach((option) => {
                 if (option !== clickedOption) {
                     option.isClicked = false;
-                }else{
-                this.$emit('question-option-clicked', clickedOption);
+                } else {
+                    this.$emit('question-option-clicked', clickedOption);
                 }
             });
         },
@@ -111,20 +108,20 @@ export default {
             }
             return Array.from(indexes);
         },
-        gradeTest(){
+        gradeTest() {
             let correctAnswers = 0;
             this.$refs.questionOptions.forEach((option) => {
-               if(option.isCorrect && option.isClicked){
+                if (option.isCorrect && option.isClicked) {
                     correctAnswers++;
                     this.answerCorrect = true;
-               }else if(!option.isCorrect && option.isClicked){
+                } else if (!option.isCorrect && option.isClicked) {
                     this.answerWarning = true;
-               }
+                }
             });
             this.testGraded = true;
             return correctAnswers;
         },
-        restartTest(){
+        restartTest() {
             this.$refs.questionOptions.forEach((option) => {
                 this.answerCorrect = false;
                 this.answerWarning = false;
@@ -183,9 +180,10 @@ export default {
         margin-bottom: 15px;
     }
 
-    &__explanation{
+    &__explanation {
         visibility: hidden;
-        &--graded{
+
+        &--graded {
             visibility: visible;
             display: flex;
             font-size: rem(20);
@@ -201,16 +199,17 @@ export default {
         }
     }
 
-    img{
+    img {
         width: 100%;
         height: 600px;
     }
 }
 
-.wraning{
+.wraning {
     background-color: red;
 }
-.answer-correct{
+
+.answer-correct {
     background-color: $light-green;
 }
 </style>

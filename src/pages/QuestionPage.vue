@@ -31,8 +31,22 @@
 import QuestionCard from '../components/QuestionCard.vue';
 import InfoPanel from '../components/InfoPanel.vue';
 //test
-import terminalQuestions from '../questions/Terminal';
+import terminalQuestions from '@/questions/Terminal';
 import versionControl from '@/questions/versionControl';
+import introJava from '@/questions/introJava';
+import primitiveDataTypes from '@/questions/primitiveDataTypes';
+import referenceDataTypes from '@/questions/referenceDataTypes';
+import stringHandling from '@/questions/stringHandling';
+import VariableDecIntIns from '@/questions/variablesDecIntIns';
+import arrays from '@/questions/Arrays';
+import booleans from '@/questions/booleans';
+import logicalAndComparison from '@/questions/logicalAndComparisonOperators';
+import dotEqualsAndComments from '@/questions/dotEqualsAndComments';
+import errors from '@/questions/errors';
+import strictlyTyped from '@/questions/strictlyTyped';
+import instantiatingAclass from '@/questions/instantiatingAclass';
+import primitiveAndNonPrimitive from '@/questions/PrimitiveAndNonPrimitive';
+
 export default {
     components: { QuestionCard, InfoPanel },
     data() {
@@ -108,6 +122,45 @@ export default {
                     break;
                 case 'versioncontrol':
                     this.questions = versionControl;
+                    break;
+                case 'introjava':
+                    this.questions = introJava;
+                    break;
+                case 'primitive-data-types':
+                    this.questions = primitiveDataTypes;
+                    break;
+                case 'reference-data-types':
+                    this.questions = referenceDataTypes;
+                    break;
+                case 'string-handling':
+                    this.questions = stringHandling;
+                    break;
+                case 'variable-declaration----':
+                    this.questions = VariableDecIntIns;
+                    break;
+                case 'arrays':
+                    this.questions = arrays;
+                    break;
+                case 'booleans':
+                    this.questions = booleans;
+                    break;
+                case 'logical-and-comparison-op-':
+                    this.questions = logicalAndComparison;
+                    break;
+                case '.equals()-and-comments':
+                    this.questions = dotEqualsAndComments;
+                    break;
+                case 'errors':
+                    this.questions = errors;
+                    break;
+                case 'strictly-typed':
+                    this.questions = strictlyTyped;
+                    break;
+                case 'instantianting-a-class':
+                    this.questions = instantiatingAclass;
+                    break;
+                case 'primitive-and-nonprimitive':
+                    this.questions = primitiveAndNonPrimitive;
                     break;
                 default: 
                     console.error('Invalid test name: ', testName);

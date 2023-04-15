@@ -4,6 +4,9 @@
       <h1 class="title__text">Java Practice Questions</h1>
       <span class="title__sub-text">V1.2</span>
     </div>
+    <div class="title__question-number">
+      <span>{{numOfQuestions}} questions and growing</span>
+    </div>
     <div class="pages">
       <base-link linkPath="topics/qnotes" class="pages__link">
           <p class="pages__text">Q's Notes</p>
@@ -20,8 +23,51 @@
 
 <script>
 import BaseLink from "../components/BaseLink.vue";
+
+//test
+import introJava from "@/questions/introJava";
+import primitiveDataTypes from "@/questions/primitiveDataTypes";
+import refernceDataTypes from "@/questions/referenceDataTypes";
+import terminal from "@/questions/Terminal";
+import versionControl from "@/questions/versionControl";
+import stringHandling from "@/questions/stringHandling";
+import VariableDecIntIns from "@/questions/variablesDecIntIns";
+import arrays from "@/questions/Arrays";
+import booleans from "@/questions/booleans";
+import logicalAndComparison from "@/questions/logicalAndComparisonOperators";
+import dotEqualsAndComments from "@/questions/dotEqualsAndComments";
+import stricklyTyped from "@/questions/strictlyTyped";
+import instantiatingAclass from "@/questions/instantiatingAclass";
+import primitiveAndNonPrimitive from "@/questions/PrimitiveAndNonPrimitive";
+
 export default {
   components: { BaseLink },
+  data(){
+    return{
+      numOfQuestions : 0
+    }
+  },
+  methods: {
+    questionAmount() {
+      this.numOfQuestions = introJava.length + 
+        primitiveDataTypes.length + 
+        refernceDataTypes.length + 
+        terminal.length + 
+        versionControl.length + 
+        stringHandling.length +
+        VariableDecIntIns.length +
+        arrays.length + 
+        booleans.length +
+        logicalAndComparison.length +
+        dotEqualsAndComments.length + 
+        stricklyTyped.length + 
+        instantiatingAclass.length +
+        primitiveAndNonPrimitive.length
+    }
+  },
+  created(){
+    this.questionAmount();
+  }
 };
 </script>
 
@@ -41,6 +87,12 @@ section {
     margin-bottom: auto;
     font-size: rem(40);
     color: #f8b160;
+  }
+  &__question-number{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: rem(20);
+    font-weight: bold;
   }
 }
 
