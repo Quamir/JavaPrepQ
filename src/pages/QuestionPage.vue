@@ -46,6 +46,12 @@ import errors from '@/questions/errors';
 import strictlyTyped from '@/questions/strictlyTyped';
 import instantiatingAclass from '@/questions/instantiatingAclass';
 import primitiveAndNonPrimitive from '@/questions/PrimitiveAndNonPrimitive';
+import operators from '@/questions/operators';
+import attributesAndInstanceVar from '@/questions/attributesAndInstanceVar';
+import classesAndReferenceDataTypes from '@/questions/classesAndReferenceDataTypes';
+import creatingObjects from '@/questions/creatingObjects';
+import constructors from '@/questions/constructors';
+import strings from '@/questions/strings';
 
 export default {
     components: { QuestionCard, InfoPanel },
@@ -161,6 +167,24 @@ export default {
                     break;
                 case 'primitive-and-nonprimitive':
                     this.questions = primitiveAndNonPrimitive;
+                    break;
+                case 'operators':
+                    this.questions = operators;
+                    break;
+                case 'attributes-and-Instance-variables':
+                    this.questions = attributesAndInstanceVar;
+                    break;
+                case 'classes-and-Reference-data-types':
+                    this.questions = classesAndReferenceDataTypes;
+                    break;
+                case 'creating-objects':
+                    this.questions = creatingObjects;
+                    break;
+                case 'constructors':
+                    this.questions = constructors;
+                    break;
+                case 'strings':
+                    this.questions = strings;
                     break;
                 default: 
                     console.error('Invalid test name: ', testName);

@@ -39,6 +39,12 @@ import dotEqualsAndComments from "@/questions/dotEqualsAndComments";
 import stricklyTyped from "@/questions/strictlyTyped";
 import instantiatingAclass from "@/questions/instantiatingAclass";
 import primitiveAndNonPrimitive from "@/questions/PrimitiveAndNonPrimitive";
+import operators from "@/questions/operators";
+import attributesAndInstanceVar from "@/questions/attributesAndInstanceVar";
+import classesAndReferenceDataTypes from "@/questions/classesAndReferenceDataTypes";
+import creatingObjects from "@/questions/creatingObjects";
+import constructors from "@/questions/constructors";
+import strings from "@/questions/strings";
 
 export default {
   components: { BaseLink },
@@ -62,7 +68,14 @@ export default {
         dotEqualsAndComments.length + 
         stricklyTyped.length + 
         instantiatingAclass.length +
-        primitiveAndNonPrimitive.length
+        primitiveAndNonPrimitive.length + 
+        operators.length + 
+        attributesAndInstanceVar.length + 
+        classesAndReferenceDataTypes.length + 
+        creatingObjects.length + 
+        constructors.length +
+        strings.length
+
     }
   },
   created(){

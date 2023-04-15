@@ -13,7 +13,13 @@ const qNotes = [
     'errors',
     'strictly-typed',
     'instantianting-a-class',
-    'primitive-and-nonprimitive'
+    'primitive-and-nonprimitive',
+    'operators',
+    'attributes-and-Instance-variables',
+    'classes-and-Reference-data-types',
+    'creating-objects',
+    'constructors',
+    'strings'
 ];
 
 export default qNotes;
