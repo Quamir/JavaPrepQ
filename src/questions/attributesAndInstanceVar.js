@@ -2,7 +2,7 @@ const attributesAndInstanceVar = [
   {
     question: "What is an attribute in Java?",
     answer:
-      "In Java, an attribute is a variable that is associated with an instance of a class and represents the state or behavior of that instance.",
+      "An attribute is a variable that is associated with an instance of a class and represents the state or behavior of that instance.",
     explanation:
       "Attributes are also known as instance variables in Java, and they can have different access modifiers, such as public, private, protected, or default (package-private).",
     img: "",
@@ -154,13 +154,6 @@ const attributesAndInstanceVar = [
     answer: "Yes, if its access modifier allows it.",
     explanation:
       "A static variable can be accessed from outside its class if its access modifier (public, private, protected, or default) allows it. For example, a public static variable can be accessed from any class, while a private static variable can only be accessed within the class it is declared in.",
-    img: "",
-  },
-  {
-    question: "What is the default value of a static variable in Java?",
-    answer: "0, 0.0, false, or null, depending on the variable type.",
-    explanation:
-      "In Java, static variables are assigned default values if not explicitly initialized. Numeric types default to 0 or 0.0, boolean types default to false, and reference types default to null.",
     img: "",
   },
   {
@@ -334,24 +327,6 @@ const attributesAndInstanceVar = [
       "Protected instance variables can be accessed by subclasses and classes within the same package, while private instance variables can only be accessed within the class.",
     explanation:
       "In Java, protected instance variables can be accessed directly by subclasses (through inheritance) or by any class within the same package, whereas private instance variables can only be accessed directly within the class they are declared in. Private instance variables promote stronger encapsulation, while protected instance variables allow for more flexibility in class hierarchies and package organization.",
-    img: "",
-  },
-  {
-    question:
-      "How do you access a default (package-private) instance variable from outside of its package in Java?",
-    answer:
-      "You cannot directly access a default instance variable from outside of its package.",
-    explanation:
-      "In Java, default (package-private) instance variables can only be accessed directly by classes within the same package. There is no direct way to access a default instance variable from outside of its package. To provide access to a default instance variable from other packages, you should use getter and setter methods with appropriate access modifiers (public or protected).",
-    img: "",
-  },
-  {
-    question:
-      "What is the difference between a default (package-private) instance variable and a private instance variable in Java?",
-    answer:
-      "Default instance variables are accessible within the same package, while private instance variables are accessible only within the class.",
-    explanation:
-      "In Java, default (package-private) instance variables can be accessed directly by classes within the same package, whereas private instance variables can only be accessed directly within the class they are declared in. Default instance variables provide a level of encapsulation between private and protected, allowing access within the package but not outside it, while private instance variables provide the strongest level of encapsulation.",
     img: "",
   },
   {

@@ -183,6 +183,150 @@ const strings = [
       'In Java, you can check if a String contains a particular character or substring by calling the contains() method on the String object. The method takes a CharSequence as an argument and returns a boolean value indicating whether the input character sequence is present in the String. For example, string.contains("substring") returns true if the input string contains the specified substring, and false otherwise.',
     img: "",
   },
+  {
+    question:
+      "How do you count the occurrences of a character or substring within a String in Java?",
+    answer: "Using a loop and the indexOf() method.",
+    explanation:
+      "In Java, you can count the occurrences of a character or substring within a String by using a loop and the indexOf() method. Start with a count of 0 and a fromIndex of 0, then repeatedly call indexOf() with the target substring and the current fromIndex. If indexOf() returns a valid index, increment the count and update the fromIndex to the returned index plus the length of the target substring. Repeat until indexOf() returns -1, indicating that there are no more occurrences of the target substring.",
+    img: "",
+  },
+  {
+    question: "How do you compare two Strings lexicographically in Java?",
+    answer: "Using the compareTo() method.",
+    explanation:
+      "In Java, you can compare two Strings lexicographically by calling the compareTo() method on one of the String objects and passing the other String as an argument. The method returns an integer value: a negative value if the calling String comes before the argument String, a positive value if it comes after, and 0 if they are equal. For example, string1.compareTo(string2) compares string1 and string2 lexicographically.",
+    img: "",
+  },
+  {
+    question: "How do you sort an array of Strings alphabetically in Java?",
+    answer: "Using the Arrays.sort() method.",
+    explanation:
+      "In Java, you can sort an array of Strings alphabetically by calling the static sort() method from the Arrays class and passing the array as an argument. The method sorts the array in-place in ascending lexicographic order. For example, Arrays.sort(arrayOfStrings) sorts the arrayOfStrings alphabetically.",
+    img: "",
+  },
+  {
+    question:
+      "How do you find the longest or shortest String in an array of Strings in Java?",
+    answer:
+      "Using a loop to iterate through the array and compare String lengths.",
+    explanation:
+      "In Java, you can find the longest or shortest String in an array of Strings by using a loop to iterate through the array and compare the lengths of the Strings. Initialize a reference to the first String as the current longest or shortest, then iterate through the remaining Strings. If you find a String with a longer (or shorter) length, update the reference. After iterating through the entire array, the reference will point to the longest or shortest String.",
+    img: "",
+  },
+  {
+    question: "How do you check if a String is a palindrome in Java?",
+    answer:
+      "Using a loop to compare characters at opposite ends of the String.",
+    explanation:
+      "In Java, you can check if a String is a palindrome by using a loop to compare characters at opposite ends of the String. Initialize two indices, one at the beginning and one at the end of the String. Iterate through the String while comparing the characters at the two indices. If the characters are not equal, the String is not a palindrome. If the indices meet or cross each other, the String is a palindrome.",
+    img: "",
+  },
+  {
+    question: "How do you remove duplicate characters from a String in Java?",
+    answer: "Using a Set and StringBuilder.",
+    explanation:
+      "In Java, you can remove duplicate characters from a String by using a Set to track unique characters and a StringBuilder to build the result. Iterate through the characters of the original String, and for each character, check if it is in the Set. If it is not, add it to the Set and append it to the StringBuilder. Finally, convert the StringBuilder to a String to obtain the result with duplicate characters removed.",
+    img: "",
+  },
+  {
+    question:
+      "How do you count the number of vowels and consonants in a String in Java?",
+    answer:
+      "Using a loop to iterate through the characters and count vowels and consonants.",
+    explanation:
+      "In Java, you can count the number of vowels and consonants in a String by using a loop to iterate through the characters. Initialize vowel and consonant counts to zero. For each character, check if it is a vowel (a, e, i, o, or u, either uppercase or lowercase) and increment the vowel count if it is. If the character is an uppercase or lowercase letter and not a vowel, increment the consonant count. After iterating through the entire String, you will have the counts of vowels and consonants.",
+    img: "",
+  },
+  {
+    question:
+      "How do you find the first non-repeated character in a String in Java?",
+    answer:
+      "Using a LinkedHashMap to store character frequencies and iterating through the LinkedHashMap.",
+    explanation:
+      "In Java, you can find the first non-repeated character in a String by using a LinkedHashMap to store character frequencies. Iterate through the characters of the String and update the LinkedHashMap with their counts. Then, iterate through the LinkedHashMap and find the first character with a count of 1. LinkedHashMap preserves insertion order, so this character will be the first non-repeated character in the String.",
+    img: "",
+  },
+  {
+    question: "How do you check if a String is a palindrome in Java?",
+    answer:
+      "Using a loop to compare characters at opposite ends of the String.",
+    explanation:
+      "In Java, you can check if a String is a palindrome by using a loop to compare characters at opposite ends of the String. Initialize two indices, one at the beginning and one at the end of the String. Iterate through the String while comparing the characters at the two indices. If the characters are not equal, the String is not a palindrome. If the indices meet or cross each other, the String is a palindrome.",
+    img: "",
+  },
+  {
+    question: "How do you remove duplicate characters from a String in Java?",
+    answer: "Using a Set and StringBuilder.",
+    explanation:
+      "In Java, you can remove duplicate characters from a String by using a Set to track unique characters and a StringBuilder to build the result. Iterate through the characters of the original String, and for each character, check if it is in the Set. If it is not, add it to the Set and append it to the StringBuilder. Finally, convert the StringBuilder to a String to obtain the result with duplicate characters removed.",
+    img: "",
+  },
+  {
+    question:
+      "How do you count the number of vowels and consonants in a String in Java?",
+    answer:
+      "Using a loop to iterate through the characters and count vowels and consonants.",
+    explanation:
+      "In Java, you can count the number of vowels and consonants in a String by using a loop to iterate through the characters. Initialize vowel and consonant counts to zero. For each character, check if it is a vowel (a, e, i, o, or u, either uppercase or lowercase) and increment the vowel count if it is. If the character is an uppercase or lowercase letter and not a vowel, increment the consonant count. After iterating through the entire String, you will have the counts of vowels and consonants.",
+    img: "",
+  },
+  {
+    question:
+      "How do you find the first non-repeated character in a String in Java?",
+    answer:
+      "Using a LinkedHashMap to store character frequencies and iterating through the LinkedHashMap.",
+    explanation:
+      "In Java, you can find the first non-repeated character in a String by using a LinkedHashMap to store character frequencies. Iterate through the characters of the String and update the LinkedHashMap with their counts. Then, iterate through the LinkedHashMap and find the first character with a count of 1. LinkedHashMap preserves insertion order, so this character will be the first non-repeated character in the String.",
+    img: "",
+  },
+  {
+    question:
+      "How do you find the most frequent character in a String in Java?",
+    answer:
+      "Using a HashMap to store character frequencies and iterating through the HashMap.",
+    explanation:
+      "In Java, you can find the most frequent character in a String by using a HashMap to store character frequencies. Iterate through the characters of the String and update the HashMap with their counts. Then, iterate through the HashMap to find the character with the highest count, which is the most frequent character in the String.",
+    img: "",
+  },
+  {
+    question: "How do you convert a String to a byte array in Java?",
+    answer: "Using the getBytes() method.",
+    explanation:
+      "In Java, you can convert a String to a byte array by using the getBytes() method. This method returns a byte array containing the character sequence of the String in the default charset. Optionally, you can specify the charset as a parameter to the getBytes() method if you need to use a specific charset for the conversion.",
+    img: "",
+  },
+  {
+    question: "How do you convert a byte array to a String in Java?",
+    answer: "Using the String constructor.",
+    explanation:
+      "In Java, you can convert a byte array to a String by using the String constructor that takes a byte array as a parameter. This constructor creates a new String object by decoding the byte array using the default charset. Optionally, you can specify the charset as a second parameter to the String constructor if you need to use a specific charset for the conversion.",
+    img: "",
+  },
+  {
+    question: "How do you find the difference between two Strings in Java?",
+    answer: "Using a comparison algorithm like the Levenshtein distance.",
+    explanation:
+      "In Java, you can find the difference between two Strings by using a comparison algorithm like the Levenshtein distance. The Levenshtein distance is a measure of the number of single-character edits (insertions, deletions, or substitutions) required to transform one String into another. There are various libraries available in Java, such as Apache Commons Lang, that provide implementations of the Levenshtein distance algorithm.",
+    img: "",
+  },
+  {
+    question:
+      "How do you perform regular expression matching on a String in Java?",
+    answer: "Using the matches() method or the Pattern and Matcher classes.",
+    explanation:
+      "In Java, you can perform regular expression matching on a String using the matches() method of the String class or by using the Pattern and Matcher classes. The matches() method takes a regular expression as an argument and returns true if the String matches the given regular expression. Alternatively, you can use the Pattern class to compile a regular expression and the Matcher class to perform matching operations on a String.",
+    img: "",
+  },
+  {
+    question:
+      "How do you replace substrings matching a regular expression in a String in Java?",
+    answer:
+      "Using the replaceAll() or replaceFirst() method of the String class.",
+    explanation:
+      "In Java, you can replace substrings matching a regular expression in a String using the replaceAll() or replaceFirst() method of the String class. The replaceAll() method takes two arguments: the first is the regular expression to match, and the second is the replacement String. The method returns a new String with all occurrences of the matched substrings replaced by the replacement String. The replaceFirst() method works similarly but replaces only the first occurrence of the matched substring.",
+    img: "",
+  },
 ];
 
 export default strings;

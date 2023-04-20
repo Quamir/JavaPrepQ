@@ -9,15 +9,9 @@
             </div>
             <img v-if="questionImg != ''" :src="questionImg" alt="image for question">
             <div class="question__question-wrapper" v-for="(question, index) in optionsArray" :key="index">
-                <question-option 
-                    ref="questionOptions" 
-                    class="question__option" 
-                    @option-clicked="handleOptionClicked"
-                    :optionsArray="optionsArray" 
-                    :questionNumber="questionNumber"
-                    :optionIndex="index" 
-                    :test-graded="testGraded"
-                    ></question-option>
+                <question-option ref="questionOptions" class="question__option" @option-clicked="handleOptionClicked"
+                    :optionsArray="optionsArray" :questionNumber="questionNumber" :optionIndex="index"
+                    :test-graded="testGraded"></question-option>
             </div>
             <div class="question__explanation" :class="{ 'question__explanation--graded': answerCorrect || answerWarning }">
                 <span>Explanation</span>
@@ -108,18 +102,33 @@ export default {
             }
             return Array.from(indexes);
         },
-        gradeTest() {
+        getCorrectAnswers() {
             let correctAnswers = 0;
             this.$refs.questionOptions.forEach((option) => {
                 if (option.isCorrect && option.isClicked) {
                     correctAnswers++;
                     this.answerCorrect = true;
-                } else if (!option.isCorrect && option.isClicked) {
-                    this.answerWarning = true;
                 }
             });
             this.testGraded = true;
             return correctAnswers;
+        },
+        getWrongAnswers() {
+            const wrongAnswerFound = this.$refs.questionOptions.some((option) => {
+                if (!option.isCorrect && option.isClicked) {
+                    this.answerWarning = true;
+                    return true;
+                }
+            });
+
+            if (wrongAnswerFound) {
+                return {
+                    questionNumber : this.questionNumber,
+                    location : this.$el.offsetTop
+                };
+            } else {
+                return undefined;
+            }
         },
         restartTest() {
             this.$refs.questionOptions.forEach((option) => {

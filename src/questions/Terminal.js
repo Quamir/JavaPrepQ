@@ -69,13 +69,6 @@ const terminal = [
     img: "",
   },
   {
-    question: "What is the purpose of the whatis command?",
-    answer: "Displays a brief one-line description of a Unix command",
-    explanation:
-      "The whatis command provides a quick and concise description of a Unix command. It takes one argument, which is the name of the command you want to look up. This is useful for getting a brief overview of a command without having to go through its entire manual page.",
-    img: "",
-  },
-  {
     question: "What does the man command do?",
     answer: "Displays the manual page for a Unix command or system function",
     explanation:

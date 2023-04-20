@@ -1,28 +1,15 @@
 <template>
     <section>
-        <info-panel 
-            class="info-panel"
-            :answeredQuestions="answeredQuestions"
-            :questionAmount="questionAmount"
-            :correctAnswers="correctAnswers"
-            @grade-test-clicked="gradeTest"
-            @restart-test="restartTest"
-        >
+        <info-panel class="info-panel" :answeredQuestions="answeredQuestions" :questionAmount="questionAmount"
+            :correctAnswers="correctAnswers" @grade-test-clicked="gradeTest" @restart-test="restartTest">
         </info-panel>
         <div class="questions">
-            <question-card 
-                v-for="(question, index) in shuffledTestQuestions" :key="index"
-                ref="questionCards"
-                class="question"
-                :test-questions="questions" 
-                :questionNumber="index + 1"
-                :questionText="question.question"
-                :answer="question.answer"
-                :explanation="question.explanation"
-                :question-img="question.img"
-                @question-option-clicked="handleQuestionOptionClicked"
-            ></question-card>
+            <question-card v-for="(question, index) in shuffledTestQuestions" :key="index" ref="questionCards"
+                class="question" :test-questions="questions" :questionNumber="index + 1" :questionText="question.question"
+                :answer="question.answer" :explanation="question.explanation" :question-img="question.img"
+                @question-option-clicked="handleQuestionOptionClicked"></question-card>
         </div>
+        <jump-to-question class="jump-to-question" :wrong-answers="wrongAnswers"></jump-to-question>
     </section>
 </template>
 
@@ -30,6 +17,7 @@
 //components 
 import QuestionCard from '../components/QuestionCard.vue';
 import InfoPanel from '../components/InfoPanel.vue';
+import jumpToQuestion from '../components/JumpToQuestion.vue';
 //test
 import terminalQuestions from '@/questions/Terminal';
 import versionControl from '@/questions/versionControl';
@@ -52,21 +40,32 @@ import classesAndReferenceDataTypes from '@/questions/classesAndReferenceDataTyp
 import creatingObjects from '@/questions/creatingObjects';
 import constructors from '@/questions/constructors';
 import strings from '@/questions/strings';
+import dotNotation from '@/questions/dotNotation';
+import encapsulation from '@/questions/encapsulation';
+import accessModifiers from '@/questions/accessModifiers';
+import interfaceJava from '@/questions/interface';
+import getters from '@/questions/getters';
+import setters from '@/questions/setters';
+import thisKeyword from '@/questions/thiskeyword';
+import wrapperClasses from '@/questions/wrapperClasses';
+import strings2 from '@/questions/strings2';
 
 export default {
-    components: { QuestionCard, InfoPanel },
+    components: { QuestionCard, InfoPanel, jumpToQuestion },
     data() {
         return {
-            questions : [],
+            questions: [],
             answeredQuestions: 0,
-            questionAmount : 0,
-            correctAnswers : 0,
+            questionAmount: 0,
+            correctAnswers: 0,
+            wrongAnswers: [],
             selectedOptions: [],
             answeredQuestionsSet: new Set(),
+            isTestGraded: false
         };
     },
     computed: {
-        shuffledTestQuestions(){
+        shuffledTestQuestions() {
             let shuffledQuestions = [...this.questions];
             for (let i = shuffledQuestions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -74,7 +73,7 @@ export default {
             }
             return shuffledQuestions;
         }
-    },  
+    },
     methods: {
         handleQuestionOptionClicked(clickedOption) {
             // Get the index of the question for which the option was clicked
@@ -96,22 +95,34 @@ export default {
             }
 
             this.answeredQuestions = this.answeredQuestionsSet.size;
+        },
+        gradeTest() {
+            if (this.isTestGraded) {
+                return
+            } else {
+                this.isTestGraded = true;
+                let correctAnswers = 0;
+                this.$refs.questionCards.forEach((questionCard) => {
+                    correctAnswers += questionCard.getCorrectAnswers();
+                    const wrongAnswerNumber = questionCard.getWrongAnswers();
+                    if (wrongAnswerNumber !== undefined) {
+                        this.wrongAnswers.push(wrongAnswerNumber);
+                    }
+                });
+                this.correctAnswers = correctAnswers;
+                console.log(this.wrongAnswers);
+            }
+        },
 
-            console.log("numbered of answered questions: " + this.answeredQuestions);
-        },
-        gradeTest(){
-            let correctAnswers = 0;
-            this.$refs.questionCards.forEach((questionCard) => {
-                correctAnswers += questionCard.gradeTest();
-            });
-            this.correctAnswers = correctAnswers;
-            console.log(correctAnswers);
-        },
-        restartTest(){
+        restartTest() {
+            this.isTestGraded = false;
             this.answerdQuestions = 0;
             this.correctAnswers = 0;
             this.$refs.questionCards.forEach((questionCard) => {
                 questionCard.restartTest();
+                this.answeredQuestions = 0;
+                this.wrongAnswers = [];
+                this.answeredQuestionsSet = new Set();
             });
         },
         getTestName() {
@@ -122,7 +133,7 @@ export default {
         setTest() {
             let testName = this.getTestName();
 
-            switch(testName){
+            switch (testName) {
                 case 'Terminal':
                     this.questions = terminalQuestions;
                     break;
@@ -186,14 +197,41 @@ export default {
                 case 'strings':
                     this.questions = strings;
                     break;
-                default: 
+                case 'dot-notation':
+                    this.questions = dotNotation;
+                    break;
+                case 'encapsulation':
+                    this.questions = encapsulation;
+                    break;
+                case 'access-modifiers':
+                    this.questions = accessModifiers;
+                    break;
+                case 'interface':
+                    this.questions = interfaceJava;
+                    break;
+                case 'getters':
+                    this.questions = getters;
+                    break;
+                case 'setters':
+                    this.questions = setters;
+                    break;
+                case 'this-keyword':
+                    this.questions = thisKeyword;
+                    break;
+                case 'wrapper-classes':
+                    this.questions = wrapperClasses;
+                    break;
+                case 'strings2':
+                    this.questions = strings2;
+                    break;
+                default:
                     console.error('Invalid test name: ', testName);
                     break;
             }
             this.questionAmount = this.questions.length;
         }
     },
-    created(){
+    created() {
         this.setTest();
         console.log(this.shuffledTestQuestions.answer);
     }
@@ -201,22 +239,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section{
+section {
     display: flex;
+    flex-direction: row;
     margin-top: 50px;
-}
-.questions {
-    width: 80%;
-    margin: auto;
 }
 
 .question {
-    width: 60%;
+    width: 50%;
     margin: auto;
+    margin-right: 400px;
     margin-bottom: 20px;
 }
 
-.info-panel{
+.info-panel,
+.jump-to-question {
     position: fixed;
 }
 </style>

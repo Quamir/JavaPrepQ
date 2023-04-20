@@ -16,14 +16,6 @@ const versionControl = [
   },
   {
     question:
-      "What is the Git command that shows the current status of the working directory and the staging area?",
-    answer: "git status",
-    explanation:
-      "The `git status` command shows the current status of the working directory and the staging area. It displays information about the files that have been modified, added, or deleted, as well as the changes that have been staged and committed.",
-    img: "",
-  },
-  {
-    question:
       "What is the Git command used to create a new commit with the changes that have been staged in the staging area?",
     answer: "git commit",
     explanation:

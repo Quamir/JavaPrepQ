@@ -128,21 +128,9 @@ const primitiveDataTypes = [
     img: ''
   },
   {
-    question: 'What is the difference between a float and a double in Java?',
-    answer: 'Precision',
-    explanation: 'The difference between a float and a double in Java is the precision. A float is a single-precision 32-bit IEEE 754 floating-point number, while a double is a double-precision 64-bit IEEE 754 floating-point number. Doubles have more precision and a wider range of values compared to floats.',
-    img: ''
-  },
-  {
     question: 'Which Java data type can store the largest positive integer value?',
     answer: 'long',
     explanation: 'The long data type can store the largest positive integer value in Java. A long is a 64-bit signed two\'s complement integer with a maximum value of 9,223,372,036,854,775,807.',
-    img: ''
-  },
-  {
-    question: 'In Java, what is the default value for a boolean variable?',
-    answer: 'false',
-    explanation: 'In Java, the default value for a boolean variable is false. When a boolean variable is declared but not initialized, it will have the default value of false.',
     img: ''
   },
   {

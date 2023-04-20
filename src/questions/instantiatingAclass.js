@@ -2,7 +2,7 @@ const instantiatingAclass = [
   {
     question: "What does it mean to instantiate a class in Java?",
     answer:
-      "Instantiating a class in Java means creating an object of that class using the 'new' keyword and allocating memory for it.",
+      "To create an object of that class using the 'new' keyword and allocating memory for it.",
     explanation:
       "Instantiating a class means creating a new instance of that class in memory, which can then be accessed and manipulated in the program.",
     img: "",
@@ -21,14 +21,6 @@ const instantiatingAclass = [
       "A class is a blueprint for creating objects, while an object is an instance of a class.",
     explanation:
       "In Java, a class defines the properties and behavior of a group of objects, while an object is a single instance of that class created using the 'new' operator.",
-    img: "",
-  },
-  {
-    question: "What is the syntax for instantiating a class in Java?",
-    answer:
-      "To instantiate a class in Java, you use the 'new' keyword followed by the class name and parentheses, like this: 'ClassName objectName = new ClassName();'",
-    explanation:
-      "The 'new' keyword is used to allocate memory for a new object of the specified class on the heap, and the parentheses are used to pass any necessary parameters to the object's constructor.",
     img: "",
   },
   {
@@ -65,35 +57,11 @@ const instantiatingAclass = [
     img: "",
   },
   {
-    question: "What is the process of creating an object in Java?",
-    answer:
-      "The process of creating an object in Java involves two steps: declaring a variable of the object type and instantiating the object using the 'new' operator.",
-    explanation:
-      "To create an object in Java, you must first declare a variable of the object's type. This reserves a memory location for the object reference. Then, you can use the 'new' operator to instantiate the object and create an instance of the class. This assigns the reference to the newly created object to the variable, allowing you to access its methods and properties.",
-    img: "",
-  },
-  {
     question: "What is the purpose of the 'new' operator in Java?",
     answer:
-      "The 'new' operator in Java is used to create a new instance of a class, allocating memory for the object and returning a reference to that memory.",
+      "To create a new instance of a class, allocating memory for the object and returning a reference to that memory.",
     explanation:
       "In Java, the 'new' operator is used to create a new instance of a class. It allocates memory for the object and initializes its properties to default values. The operator returns a reference to the memory location of the newly created object, which can be used to access the object's properties and methods.",
-    img: "",
-  },
-  {
-    question: "What is the difference between a class and an object in Java?",
-    answer:
-      "A class is a blueprint or template for creating objects, while an object is an instance of a class.",
-    explanation:
-      "In Java, a class is a blueprint or template for creating objects. It defines the properties and methods that an object of that class will have. An object, on the other hand, is an instance of a class. It is created by using the 'new' operator to allocate memory and initialize the object's properties. Multiple objects can be created from the same class, each with their own set of property values.",
-    img: "",
-  },
-  {
-    question: "What is the syntax for creating a new object in Java?",
-    answer:
-      "The syntax for creating a new object in Java is 'ClassName objectName = new ClassName();'.",
-    explanation:
-      "To create a new object in Java, you must first declare a variable of the object's type using the class name, followed by the variable name. Then, use the 'new' operator to instantiate the object and assign the reference to the variable, followed by parentheses to call the class's constructor. This syntax creates a new object of the specified class and assigns its reference to the object variable.",
     img: "",
   },
   {
@@ -102,26 +70,30 @@ const instantiatingAclass = [
       "No, a class cannot be instantiated without the 'new' keyword in Java.",
     explanation:
       "The 'new' keyword is necessary to allocate memory for a new object of a class and to invoke its constructor. Without the 'new' keyword, there is no way to create a new object of a class in Java.",
+      img: "",
   },
   {
     question: "What happens when a class is instantiated in Java?",
     answer:
-      "When a class is instantiated in Java, memory is allocated for a new object of the class and the constructor of the class is invoked to initialize the object.",
+      "Memory is allocated for a new object of the class and the constructor of the class is invoked to initialize the object.",
     explanation:
       "The constructor of the class is responsible for initializing the object's instance variables and performing any other necessary setup. Once the constructor has completed, a reference to the new object is returned.",
+      img: "",
   },
   {
     question: "Can a class have multiple constructors in Java?",
     answer: "Yes, a class can have multiple constructors in Java.",
     explanation:
       "Multiple constructors can be defined for a class with different parameter lists. This allows for more flexibility when creating objects of the class, as different constructors can be used depending on the situation.",
+      img: "",
   },
   {
     question: "What is the default constructor in Java?",
     answer:
-      "The default constructor in Java is a no-argument constructor that is automatically generated by the compiler if no constructor is explicitly defined in a class.",
+      "A no-argument constructor that is automatically generated by the compiler if no constructor is explicitly defined in a class.",
     explanation:
       "The default constructor initializes all instance variables to their default values and is used if no other constructor is called when an object is instantiated.",
+      img: "",
   },
   {
     question: "What is the syntax for calling a constructor in Java?",
@@ -129,6 +101,7 @@ const instantiatingAclass = [
       "To call a constructor in Java, use the keyword 'new' followed by the name of the class and a set of parentheses containing any arguments required by the constructor. For example: MyClass obj = new MyClass(arg1, arg2);",
     explanation:
       "This syntax creates a new object of the class 'MyClass' and passes the arguments 'arg1' and 'arg2' to its constructor.",
+      img: "",
   },
   {
     question: "What is the purpose of the constructor method in a class?",
@@ -136,12 +109,14 @@ const instantiatingAclass = [
       "To initialize the object's properties and provide any necessary setup for the object.",
     explanation:
       "The constructor method is a special method in a class that is used to initialize the object's properties and perform any necessary setup for the object. It is called automatically when an object is created using the 'new' operator, and it typically takes arguments that are used to set the initial values of the object's properties.",
+      img: "",
   },
   {
     question: "What is the syntax for creating a new object in Java?",
     answer: "ClassName objectName = new ClassName();",
     explanation:
       "To create a new object in Java, you must use the 'new' operator along with the class name and parentheses. The resulting object reference is then assigned to a variable of the appropriate class type. The variable name can be any valid identifier name that follows the rules for variable names in Java.",
+      img: "",
   },
   {
     question: "Can you create multiple objects from the same class?",
@@ -149,6 +124,7 @@ const instantiatingAclass = [
       "Yes, you can create as many objects as you need from the same class.",
     explanation:
       "When you create a class in Java, you are creating a blueprint for an object. You can then create as many instances of that object as you need, each with its own set of property values. Each object is a separate entity in memory, with its own set of instance variables and methods that can be used to manipulate those variables.",
+      img: "",
   },
   {
     question: "What is a reference variable?",
@@ -156,6 +132,7 @@ const instantiatingAclass = [
       "A variable that stores the memory address of an object rather than the object itself.",
     explanation:
       "In Java, a reference variable is a variable that stores the memory address of an object rather than the object itself. This means that the variable contains a reference to the memory location where the object is stored, rather than the object's actual data. Reference variables are used extensively in Java to work with objects, since they allow you to pass objects as arguments to methods and return objects from methods.",
+      img: "",
   },
 ];
 

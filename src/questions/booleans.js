@@ -2,7 +2,7 @@ const booleans = [
   {
     question: "What is the boolean data type in Java?",
     answer:
-      "The boolean data type in Java is a primitive data type that represents true or false values.",
+      "A primitive data type that represents true or false values.",
     explanation:
       "The boolean data type is used to represent true or false values in Java. It is a primitive data type and can be used in conditional expressions and control structures like if, while, and for loops. Booleans are typically used to control the flow of a program based on certain conditions.",
     img: "",
@@ -10,7 +10,7 @@ const booleans = [
   {
     question: "How do you declare a boolean variable in Java?",
     answer:
-      'To declare a boolean variable in Java, you use the keyword "boolean" followed by the variable name.',
+      'Use the keyword "boolean" followed by the variable name.',
     explanation:
       'In Java, you declare a boolean variable by using the keyword "boolean" followed by the variable name. For example, to declare a boolean variable named "isTrue", you would write: "boolean isTrue;". You can also initialize the variable at the time of declaration, like this: "boolean isTrue = false;".',
     img: "",
@@ -18,23 +18,15 @@ const booleans = [
   {
     question: "What is the purpose of an if statement in Java?",
     answer:
-      "The purpose of an if statement in Java is to execute a block of code only if a specific condition is true.",
+      "To execute a block of code only if a specific condition is true.",
     explanation:
       "An if statement in Java is a control structure that allows you to execute a block of code only if a specific condition evaluates to true. If the condition is false, the block of code within the if statement is skipped, and the program continues executing the code after the if statement.",
     img: "",
   },
   {
-    question: "What is the syntax for a while loop in Java?",
-    answer:
-      'The syntax for a while loop in Java is "while (condition) { // code to be executed }".',
-    explanation:
-      'In Java, a while loop is used to execute a block of code repeatedly as long as a specific condition remains true. The condition is checked before each iteration, and if it evaluates to false, the loop is terminated, and the program continues with the code following the loop. The syntax for a while loop is: "while (condition) { // code to be executed }".',
-    img: "",
-  },
-  {
     question: "How do you write a for loop in Java?",
     answer:
-      'To write a for loop in Java, use the syntax "for (initialization; condition; increment) { // code to be executed }".',
+      'Use the syntax "for (initialization; condition; increment) { // code to be executed }".',
     explanation:
       'In Java, a for loop is a control structure that allows you to execute a block of code a specific number of times. The loop consists of three parts: the initialization, where you set the initial value of a loop control variable; the condition, which is checked before each iteration and determines whether the loop should continue; and the increment, which updates the loop control variable after each iteration. The syntax for a for loop is: "for (initialization; condition; increment) { // code to be executed }".',
     img: "",
@@ -59,7 +51,7 @@ const booleans = [
   {
     question: "What is the purpose of a continue statement in Java?",
     answer:
-      "The purpose of a continue statement in Java is to skip the remaining code in the current iteration of a loop and start the next iteration.",
+      "To skip the remaining code in the current iteration of a loop and start the next iteration.",
     explanation:
       "A continue statement in Java is used within a loop (for, while, or do-while) to skip the remaining code in the current iteration and start the next iteration of the loop. The loop control variable is updated, and the loop condition is checked before starting the next iteration.",
     img: "",
@@ -76,7 +68,7 @@ const booleans = [
   {
     question: "What is a nested loop in Java?",
     answer:
-      "A nested loop in Java is a loop that is placed inside another loop.",
+      "A loop that is placed inside another loop.",
     explanation:
       "A nested loop in Java refers to a situation where a loop is placed inside another loop. The inner loop completes all its iterations for each iteration of the outer loop. Nested loops are often used when working with multidimensional arrays or when a specific combination of values needs to be generated.",
     img: "",
@@ -84,7 +76,7 @@ const booleans = [
   {
     question: "How do you use a while loop in Java?",
     answer:
-      "In Java, you use a while loop by providing a condition that is checked before each iteration of the loop.",
+      "By providing a condition that is checked before each iteration of the loop.",
     explanation:
       'A while loop in Java is a control structure that repeatedly executes a block of code as long as the given condition is true. The syntax for a while loop is "while (condition) { // code }". The loop will continue to execute the code inside the curly braces until the condition becomes false.',
     img: "",
@@ -100,7 +92,7 @@ const booleans = [
   {
     question: "What is the purpose of a for loop in Java?",
     answer:
-      "The purpose of a for loop in Java is to execute a block of code a specific number of times or for each element in a collection or array.",
+      "To execute a block of code a specific number of times or for each element in a collection or array.",
     explanation:
       'A for loop in Java is a control structure that allows you to execute a block of code a specific number of times, or for each element in a collection or array. The for loop has three parts: an initialization, a condition, and an update, which are separated by semicolons. The syntax for a for loop is "for (initialization; condition; update) { // code }". The loop will execute the code inside the curly braces as long as the condition is true, and the update statement is executed after each iteration.',
     img: "",
@@ -108,7 +100,7 @@ const booleans = [
   {
     question: "How do you use a for-each loop in Java?",
     answer:
-      "In Java, you use a for-each loop to iterate through each element in a collection or array without needing to know the size or index of the elements.",
+      "To iterate through each element in a collection or array without needing to know the size or index of the elements.",
     explanation:
       'A for-each loop in Java, also known as an enhanced for loop, is a simpler way to iterate through each element in a collection or array without the need for an index or knowing the size of the collection. The syntax for a for-each loop is "for (elementType element : collection) { // code }". The loop automatically iterates through each element in the collection, and the element variable takes on the value of the current element in each iteration.',
     img: "",
@@ -165,13 +157,7 @@ const booleans = [
       "The 'if' keyword is followed by parentheses containing a condition that evaluates to either true or false. If the condition is true, the code block inside the curly braces will be executed.",
     img: "",
   },
-  {
-    question: "What is the syntax for a basic while loop in Java?",
-    answer: "while (condition) {\n // code block\n}",
-    explanation:
-      "The 'while' keyword is followed by parentheses containing a condition that evaluates to either true or false. As long as the condition is true, the code block inside the curly braces will be executed repeatedly.",
-    img: "",
-  },
+  
   {
     question: "What is the syntax for a basic for loop in Java?",
     answer: "for (initialization; condition; update) {\n // code block\n}",
@@ -184,7 +170,7 @@ const booleans = [
     question:
       "What is the purpose of the 'else' keyword in an if/else statement?",
     answer:
-      "The 'else' keyword is used to specify a block of code to be executed if the condition in the if statement is false.",
+      "Used to specify a block of code to be executed if the condition in the if statement is false.",
     explanation:
       "If the condition in the if statement is false, the code block inside the else statement will be executed. The else statement is optional, and if it is not included, nothing will be executed if the condition is false.",
     img: "",

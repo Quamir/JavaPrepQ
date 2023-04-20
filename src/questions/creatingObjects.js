@@ -69,7 +69,7 @@ const creatingObjects = [
   {
     question: "What is object initialization in Java?",
     answer:
-      "The process of setting initial values for an object's instance variables.",
+      "the process of creating an instance of a class and setting its initial values or properties.",
     explanation:
       "Object initialization in Java refers to the process of setting initial values for an object's instance variables. This is typically done using constructors, which are special methods called during object creation to set up the initial state of the object.",
     img: "",
@@ -100,28 +100,11 @@ const creatingObjects = [
     img: "",
   },
   {
-    question: "What is the Singleton design pattern in Java?",
-    answer:
-      "A design pattern that restricts a class to have only one instance.",
-    explanation:
-      "The Singleton design pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance. This is achieved by making the constructor private and providing a static method to return the single instance of the class. Singleton is useful when a single object should be shared across the entire application, such as a configuration manager or a connection pool.",
-    img: "",
-  },
-  {
     question: 'What is the purpose of the "instanceof" keyword in Java?',
     answer:
       "To check if an object is an instance of a specific class or interface.",
     explanation:
       'The "instanceof" keyword in Java is used to determine if an object is an instance of a specific class or an implementation of a specific interface. The "instanceof" operator returns true if the object is an instance of the specified class or interface, and false otherwise. This can be useful for checking the type of an object at runtime, especially when working with polymorphism or inheritance."',
-    img: "",
-  },
-  {
-    question:
-      "What is the role of the Class class in Java, and how is it used to create objects?",
-    answer:
-      "The Class class represents class metadata, and can be used to create instances using reflection.",
-    explanation:
-      "The Class class in Java is a representation of class metadata, providing information about a class at runtime, such as its name, superclass, implemented interfaces, constructors, methods, and fields. The Class class can be used to create objects using reflection. By calling the newInstance() method (deprecated since Java 9) or using the getConstructor() method followed by newInstance() with the appropriate constructor, you can create an instance of the class represented by the Class object.",
     img: "",
   },
   {
@@ -136,7 +119,7 @@ const creatingObjects = [
   {
     question: "What is an enum in Java, and how do you create enum objects?",
     answer:
-      "An enum is a special class representing a group of constants. Enums are created using the enum keyword.",
+      "A special class representing a group of constants. Enums are created using the enum keyword.",
     explanation:
       "In Java, an enum is a special class used to represent a group of constants, typically to represent a set of related values. Enums are created using the enum keyword followed by the enum name and a list of constants enclosed in curly braces. Each constant in the enum is an object of the enum type, and you can use them directly by referring to the enum name followed by a dot and the constant name. Enums can have constructors, methods, and instance variables, but constructors must be private.",
     img: "",
@@ -168,18 +151,9 @@ const creatingObjects = [
     img: "",
   },
   {
-    question:
-      'What is the difference between the "new" keyword and the "newinstance" method in Java?',
-    answer:
-      '"new" creates objects using a constructor, while "newInstance" creates objects using reflection.',
-    explanation:
-      'In Java, the "new" keyword is used to create an object by invoking the constructor of the class. It requires you to know the class name and the appropriate constructor at compile-time. On the other hand, the "newInstance" method (now deprecated in favor of "Class.getDeclaredConstructor().newInstance()") is a part of the reflection API, and it allows you to create an object of a class without knowing the class name or constructor at compile-time. Instead, the class name can be provided at runtime, and the method will create an object using the class\'s default constructor. It is generally slower and less type-safe compared to using the "new" keyword.',
-    img: "",
-  },
-  {
     question: "What is an object's lifecycle in Java?",
     answer:
-      "An object lifecycle consists of creation, use, and garbage collection.",
+      "creation, use, and garbage collection.",
     explanation:
       "In Java, the lifecycle of an object consists of three main stages: creation, use, and garbage collection. During creation, memory is allocated for the object, and the constructor is called to initialize the object. After creation, the object can be used by calling its methods, accessing its instance variables, and passing it as an argument to other methods. Once an object is no longer needed, and there are no references to it, it becomes eligible for garbage collection. The Java garbage collector will automatically reclaim the memory occupied by the object, freeing up resources for other objects.",
     img: "",
@@ -188,7 +162,7 @@ const creatingObjects = [
     question:
       "What is garbage collection in Java, and how does it affect object creation?",
     answer:
-      "Garbage collection is the process of reclaiming memory from unused objects. It helps manage memory efficiently.",
+      "The process of reclaiming memory from unused objects. It helps manage memory efficiently.",
     explanation:
       "In Java, garbage collection is a mechanism for automatically managing memory by reclaiming memory occupied by objects that are no longer in use. When an object has no references pointing to it, it becomes eligible for garbage collection. The Java garbage collector runs periodically to find and remove such objects, freeing up memory for new objects. Garbage collection helps manage memory efficiently, preventing memory leaks and reducing the need for manual memory management. It does not directly affect object creation, but it helps ensure that there is enough available memory for creating new objects.",
     img: "",
@@ -199,15 +173,6 @@ const creatingObjects = [
       "Make the class final, declare all fields final, provide no setters, and use defensive copies for mutable fields.",
     explanation:
       "To create an immutable object in Java, you should follow these steps: 1) Declare the class as final to prevent inheritance. 2) Declare all fields as private and final to prevent modification. 3) Provide no setter methods to avoid changing field values. 4) Ensure the constructor initializes all fields. 5) For mutable fields (e.g., collections or arrays), create defensive copies when returning them from getter methods or accepting them in the constructor to prevent external modifications. By following these steps, you ensure that once an object is created, its state cannot be altered.",
-    img: "",
-  },
-  {
-    question:
-      "What is the purpose of the Builder pattern in Java, and how is it used to create objects?",
-    answer:
-      "The Builder pattern separates object construction from its representation, enabling complex object creation with readable code.",
-    explanation:
-      'The Builder pattern is a design pattern used in Java to create objects with a large number of optional or required parameters. It separates the construction of an object from its representation, making it easier to create complex objects with readable and maintainable code. To implement the Builder pattern, create an inner static class called "Builder" within the main class. The Builder class should have the same fields as the main class but with setter methods that return the Builder instance. Add a build() method in the Builder class that creates and returns an instance of the main class using the provided field values. The main class should have a private constructor that takes a Builder object as a parameter and initializes its fields from the Builder object. Clients can create objects using the Builder class by chaining setter methods and calling build() to obtain the final object.',
     img: "",
   },
 ];

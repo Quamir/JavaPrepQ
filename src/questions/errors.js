@@ -2,33 +2,37 @@ const errors = [
   {
     question: "What is a syntax error in Java?",
     answer:
-      "A syntax error is an error that occurs when the code violates the rules of the programming language.",
+      "An error that occurs when the code violates the rules of the programming language.",
     explanation:
       "A syntax error is caused by incorrect syntax in the code, such as missing a semicolon, using incorrect capitalization, or misspelling a keyword. This type of error is usually caught by the compiler when the code is being compiled.",
+      img: "",
   },
 
   {
     question: "What is a logical error in Java?",
     answer:
-      "A logical error is an error that occurs when the code compiles and runs without errors, but the output is not what was expected.",
+      "An error that occurs when the code compiles and runs without errors, but the output is not what was expected.",
     explanation:
       "A logical error is caused by a mistake in the logic of the program. It can be difficult to detect because the code will still compile and run without errors, but the output will not be what was intended.",
+      img: "",
   },
 
   {
     question: "What is a runtime error in Java?",
     answer:
-      "A runtime error is an error that occurs while the program is running.",
+      "An error that occurs while the program is running.",
     explanation:
       "A runtime error can be caused by a variety of factors, such as dividing by zero, accessing an array out of bounds, or attempting to open a file that does not exist. This type of error is not caught by the compiler and can cause the program to crash.",
+      img: "",
   },
 
   {
     question: "What is a null pointer exception in Java?",
     answer:
-      "A null pointer exception is a type of runtime error that occurs when the program tries to access an object or variable that is null.",
+      "An error that occurs when the program tries to access an object or variable that is null.",
     explanation:
       "A null pointer exception can occur when the program tries to access a method or property of an object that is null, or when the program tries to access an element of an array that is null. This type of error can be difficult to diagnose because it may not occur until the program is in a certain state.",
+      img: "",
   },
   {
     question:

@@ -11,7 +11,7 @@ const VariableDecIntIns = [
   {
     question: "What is an instance variable in Java?",
     answer:
-      "An instance variable is a non-static variable that belongs to an object and holds values specific to each instance of the class.",
+      "A non-static variable that belongs to an object and holds values specific to each instance of the class.",
     explanation:
       "Instance variables are declared inside a class but outside any method. They store data that is specific to each instance of a class and can have different values for different objects.",
     img: "",
@@ -32,17 +32,9 @@ const VariableDecIntIns = [
     img: "",
   },
   {
-    question:
-      "What happens if an instance variable is not initialized in Java?",
-    answer: "It gets assigned a default value.",
-    explanation:
-      "If an instance variable is not initialized, Java automatically assigns a default value to it, depending on its data type. For example, numeric types get a default value of 0, while reference types get a default value of null.",
-    img: "",
-  },
-  {
     question: "What is the scope of an instance variable in Java?",
     answer:
-      "The scope of an instance variable is the entire class in which it is declared.",
+      "The entire class in which it is declared.",
     explanation:
       "Instance variables can be accessed by any method within the class where they are declared. They are not accessible outside the class unless the access modifier (such as public) allows it.",
     img: "",
@@ -120,7 +112,7 @@ const VariableDecIntIns = [
   {
     question:
       "What is the default value of an uninitialized instance variable of type char?",
-    answer: "\u0000",
+    answer: "\\u0000",
     explanation:
       "In Java, when an instance variable of type char is not explicitly initialized, it is automatically initialized to its default value, which is the null character (\u0000).",
     img: "",
@@ -128,7 +120,7 @@ const VariableDecIntIns = [
   {
     question: "What is the scope of a local variable in Java?",
     answer:
-      "The scope of a local variable is limited to the block in which it is declared.",
+      "The block which it is declared.",
     explanation:
       "In Java, the scope of a local variable is limited to the block in which it is declared. The variable is only accessible within that block and goes out of scope when the block execution is completed.",
     img: "",
@@ -139,31 +131,6 @@ const VariableDecIntIns = [
     answer: "It makes the variable a constant.",
     explanation:
       'When the "final" keyword is applied to a variable in Java, it makes the variable a constant. This means the variable\'s value cannot be changed after it has been initialized.',
-    img: "",
-  },
-  {
-    question:
-      "What is the difference between declaring and initializing a variable in Java?",
-    answer:
-      "Declaration introduces a variable, while initialization assigns a value to it.",
-    explanation:
-      "In Java, declaring a variable means introducing it with its type and name, without assigning a value. Initializing a variable, on the other hand, means assigning a value to the variable either during declaration or later in the code.",
-    img: "",
-  },
-  {
-    question:
-      "How can you declare multiple variables of the same type in a single statement?",
-    answer: "Use a comma-separated list of variable names.",
-    explanation:
-      "In Java, you can declare multiple variables of the same type in a single statement by using a comma-separated list of variable names after the data type. For example: int a, b, c;",
-    img: "",
-  },
-  {
-    question: "What is the difference between local and instance variables?",
-    answer:
-      "Local variables are declared within a method, while instance variables are declared within a class but outside any method.",
-    explanation:
-      "Local variables have their scope limited to the method they are declared in, and they are not associated with an instance of a class. Instance variables are associated with an instance of a class and have their scope throughout the entire class, making them accessible to all methods within the class.",
     img: "",
   },
   {
@@ -184,7 +151,7 @@ const VariableDecIntIns = [
   {
     question: "What are class variables and how are they declared?",
     answer:
-      'Class variables are variables shared among all instances of a class and are declared with the "static" keyword.',
+      'Variables shared among all instances of a class and are declared with the "static" keyword.',
     explanation:
       'Class variables are shared among all instances of a class, and only one copy of the variable exists in memory. They are declared using the "static" keyword before the data type. For example: static int counter;',
     img: "",
@@ -192,7 +159,7 @@ const VariableDecIntIns = [
   {
     question: 'What does it mean for a variable to be "shadowed"?',
     answer:
-      "A variable is shadowed when a local variable has the same name as an instance variable.",
+      "When a local variable has the same name as an instance variable.",
     explanation:
       'When a local variable has the same name as an instance variable, the local variable is said to "shadow" the instance variable. In this case, the local variable takes precedence within the method, and the instance variable is only accessible using the "this" keyword. For example: this.instanceVariable = localVariable;',
     img: "",
@@ -213,7 +180,7 @@ const VariableDecIntIns = [
   },
   {
     question: "What is the purpose of a constructor in Java?",
-    answer: "A constructor initializes an object when it is created.",
+    answer: "Initializes an object when it is created.",
     explanation:
       "A constructor is a special method in a class that is called when a new instance of the class is created. Constructors are used to initialize the state of an object by setting the values of its instance variables.",
     img: "",
@@ -237,7 +204,7 @@ const VariableDecIntIns = [
   },
   {
     question: 'What does the "this" keyword refer to in Java?',
-    answer: "It refers to the current instance of a class.",
+    answer: "the current instance of a class.",
     explanation:
       'In Java, the "this" keyword refers to the current instance of a class. It can be used to access instance variables and methods within the class. The "this" keyword is often used to resolve naming conflicts between instance variables and local variables or method parameters.',
     img: "",

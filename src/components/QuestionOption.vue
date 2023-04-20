@@ -43,8 +43,6 @@ export default {
             this.isCorrect = this.optionsArray[this.optionIndex] === this.$parent.answer;
             this.$emit('option-clicked', this);
             this.$emit('answer-selected', this.isCorrect);
-            console.log(this.questionNumber);
-            console.log(this.isClicked);
           }
         },
         testRestart(){

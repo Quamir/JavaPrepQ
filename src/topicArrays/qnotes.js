@@ -19,7 +19,16 @@ const qNotes = [
     'classes-and-Reference-data-types',
     'creating-objects',
     'constructors',
-    'strings'
+    'strings',
+    'dot-notation',
+    'encapsulation',
+    'access-modifiers',
+    'interface',
+    'getters',
+    'setters',
+    'this-keyword',
+    'wrapper-classes',
+    'strings2'
 ];
 
 export default qNotes;

@@ -1,7 +1,7 @@
 const operators = [
   {
     question: "What is the purpose of the == operator in Java?",
-    answer: "The == operator is used to compare the equality of two operands.",
+    answer: "To compare the equality of two operands.",
     explanation:
       "In Java, the == operator is used to compare the equality of two operands, whether they are primitive types or object references. If the operands are primitive types, the == operator compares their values, while if the operands are object references, the == operator compares their memory addresses to determine if they refer to the same object instance.",
     img: "",
@@ -9,7 +9,7 @@ const operators = [
   {
     question: "What is the purpose of the != operator in Java?",
     answer:
-      "The != operator is used to compare the inequality of two operands.",
+      "To compare the inequality of two operands.",
     explanation:
       "In Java, the != operator is used to compare the inequality of two operands, whether they are primitive types or object references. If the operands are primitive types, the != operator compares their values, while if the operands are object references, the != operator compares their memory addresses to determine if they refer to different object instances.",
     img: "",
@@ -17,7 +17,7 @@ const operators = [
   {
     question: "What is the purpose of the > operator in Java?",
     answer:
-      "The > operator is used to determine if the left operand is greater than the right operand.",
+      "To determine if the left operand is greater than the right operand.",
     explanation:
       "In Java, the > operator is used to compare two operands to determine if the left operand is greater than the right operand. This operator can be used with numeric primitive types such as int, double, or float, as well as with character primitive types.",
     img: "",
@@ -25,7 +25,7 @@ const operators = [
   {
     question: "What is the purpose of the >= operator in Java?",
     answer:
-      "The >= operator is used to determine if the left operand is greater than or equal to the right operand.",
+      "To determine if the left operand is greater than or equal to the right operand.",
     explanation:
       "In Java, the >= operator is used to compare two operands to determine if the left operand is greater than or equal to the right operand. This operator can be used with numeric primitive types such as int, double, or float, as well as with character primitive types.",
     img: "",
@@ -111,9 +111,9 @@ const operators = [
   {
     question:
       "What is the arithmetic operator used for multiplication in Java?",
-    answer: "",
+    answer: "*",
     explanation:
-      "The '' operator is used for multiplication in Java. It can be used to multiply two numbers.",
+      "The '*' operator is used for multiplication in Java. It can be used to multiply two numbers.",
     img: "",
   },
   {
@@ -161,7 +161,7 @@ const operators = [
     question:
       "How do you use parentheses to control the order of operations with arithmetic operators in Java?",
     answer:
-      "You can use parentheses to group expressions and control the order of operations within them.",
+      "To group expressions and control the order of operations within them.",
     explanation:
       "Expressions within parentheses are evaluated before those outside of parentheses.",
     img: "",
@@ -233,24 +233,15 @@ const operators = [
   {
     question: 'What is the purpose of the "=" assignment operator in Java?',
     answer:
-      'The "=" assignment operator in Java is used to assign a value to a variable.',
+      'To assign a value to a variable.',
     explanation:
       'The "=" operator is used to set the value of a variable to a certain value or expression. For example, the statement "x = 5" sets the value of the variable "x" to 5. The "=" operator can also be used to assign the value of one variable to another variable, such as "y = x".',
     img: "",
   },
   {
-    question:
-      'How do you use the "=" assignment operator to assign a value to a variable in Java?',
-    answer:
-      'To use the "=" assignment operator to assign a value to a variable in Java, you simply write the name of the variable, followed by the "=" operator, followed by the value or expression that you want to assign to the variable.',
-    explanation:
-      'For example, to assign the value 5 to a variable named "x", you would write "x = 5;". This would set the value of the variable "x" to 5. The "=" operator can be used with any type of variable, including primitive types like integers and doubles, as well as object types like Strings and arrays.',
-    img: "",
-  },
-  {
     question: 'What is the "+=" assignment operator in Java?',
     answer:
-      'The "+=" assignment operator in Java is used to add a value to a variable.',
+      'Used to add a value to a variable.',
     explanation:
       'The "+=" operator is used to add a value or expression to the current value of a variable. For example, the statement "x += 5" adds 5 to the current value of the variable "x". The "+=" operator can also be used with other arithmetic operators, such as "-=" for subtraction, "=" for multiplication, "/=" for division, and "%=" for modulus.',
     img: "",
@@ -259,7 +250,7 @@ const operators = [
     question:
       'How do you use the "+=" assignment operator to add a value to a variable in Java?',
     answer:
-      'To use the "+=" assignment operator to add a value to a variable in Java, you write the name of the variable, followed by the "+=" operator, followed by the value or expression that you want to add to the variable.',
+      'You write the name of the variable, followed by the "+=" operator, followed by the value or expression that you want to add to the variable.',
     explanation:
       'For example, to add 5 to the current value of a variable named "x", you would write "x += 5;". This would add 5 to the current value of the variable "x". The "+=" operator can be used with any type of variable, including primitive types like integers and doubles, as well as object types like Strings and arrays.',
     img: "",
@@ -267,7 +258,7 @@ const operators = [
   {
     question: 'What is the "-=" assignment operator in Java?',
     answer:
-      'The "-=" assignment operator in Java is used to subtract a value from a variable.',
+      'Used to subtract a value from a variable.',
     explanation:
       'The "-=" operator is used to subtract a value or expression from the current value of a variable. For example, the statement "x -= 5" subtracts 5 from the current value of the variable "x".',
     img: "",
@@ -275,93 +266,25 @@ const operators = [
   {
     question: "What is the '-=' assignment operator in Java?",
     answer:
-      "The '-=' assignment operator in Java subtracts a value from a variable and assigns the result to the same variable.",
+      "Subtracts a value from a variable and assigns the result to the same variable.",
     explanation:
       "The '-=' operator is a shorthand way to subtract a value from a variable and then assign the result back to the same variable. For example, the expression 'x -= 5' is equivalent to 'x = x - 5'. This can be useful for making code shorter and more readable.",
     img: "",
   },
   {
-    question:
-      "How do you use the '-=' assignment operator to subtract a value from a variable in Java?",
-    answer:
-      "To subtract a value from a variable using the '-=' assignment operator in Java, you simply use the operator followed by the value you want to subtract.",
-    explanation:
-      "For example, if you have a variable x with the value 10, and you want to subtract 5 from it using the '-=' operator, you would write 'x -= 5;'. This would result in the value of x being updated to 5.",
-    img: "",
-  },
-  {
-    question: "What is the '=' assignment operator in Java?",
-    answer:
-      "The '=' assignment operator in Java multiplies a variable by a value and assigns the result to the same variable.",
-    explanation:
-      "The '=' operator is a shorthand way to multiply a variable by a value and then assign the result back to the same variable. For example, the expression 'x = 5' is equivalent to 'x = x * 5'. This can be useful for making code shorter and more readable.",
-    img: "",
-  },
-  {
-    question:
-      "How do you use the '=' assignment operator to multiply a variable by a value in Java?",
-    answer:
-      "To multiply a variable by a value using the '=' assignment operator in Java, you simply use the operator followed by the value you want to multiply by.",
-    explanation:
-      "For example, if you have a variable x with the value 10, and you want to multiply it by 5 using the '*=' operator, you would write 'x *= 5;'. This would result in the value of x being updated to 50.",
-    img: "",
-  },
-  {
     question: "What is the '/=' assignment operator in Java?",
     answer:
-      "The '/=' assignment operator in Java is used to divide the value of a variable by another value and then assign the result back to the same variable.",
+      "Used to divide the value of a variable by another value and then assign the result back to the same variable.",
     explanation:
       "The '/=' operator is a compound assignment operator, which means that it combines the division operation with the assignment operation. It is equivalent to writing 'x = x / y', where 'x' is the variable being assigned and 'y' is the value being divided by. For example, the statement 'x /= 5' would divide the current value of 'x' by 5 and then assign the result back to 'x'.",
     img: "",
   },
   {
-    question:
-      "How do you use the '/=' assignment operator to divide a variable by a value in Java?",
-    answer:
-      "To use the '/=' assignment operator to divide a variable by a value in Java, you simply write the variable name followed by '/=' and then the value you want to divide by.",
-    explanation:
-      "For example, if you have a variable called 'num' and you want to divide its current value by 2 and assign the result back to 'num', you would write 'num /= 2;'. This is equivalent to writing 'num = num / 2;'.",
-    img: "",
-  },
-  {
     question: "What is the '%=' assignment operator in Java?",
     answer:
-      "The '%=' assignment operator in Java is used to get the remainder of dividing the value of a variable by another value and then assign the result back to the same variable.",
+      "Used to get the remainder of dividing the value of a variable by another value and then assign the result back to the same variable.",
     explanation:
       "The '%=' operator is also a compound assignment operator, and it combines the modulus operation with the assignment operation. It is equivalent to writing 'x = x % y', where 'x' is the variable being assigned and 'y' is the value being used as the divisor. For example, the statement 'x %= 3' would get the remainder of dividing the current value of 'x' by 3 and then assign the result back to 'x'.",
-    img: "",
-  },
-  {
-    question:
-      "How do you use the '%=' assignment operator to get the remainder of a variable divided by a value in Java?",
-    answer:
-      "To use the '%=' assignment operator to get the remainder of a variable divided by a value in Java, you simply write the variable name followed by '%=' and then the value you want to use as the divisor.",
-    explanation:
-      "For example, if you have a variable called 'num' and you want to get the remainder of its current value divided by 5 and assign the result back to 'num', you would write 'num %= 5;'. This is equivalent to writing 'num = num % 5;'.",
-    img: "",
-  },
-  {
-    question: "What is the difference between '=' and '+=' in Java?",
-    answer:
-      "The '=' operator assigns a value to a variable, while the '+=' operator adds a value to an existing value and then assigns the new value to the variable.",
-    explanation:
-      "The '=' operator is called the assignment operator and is used to assign a value to a variable. For example, x = 5 assigns the value 5 to the variable x. On the other hand, the '+=' operator is called the addition assignment operator and adds a value to the existing value of a variable and then assigns the new value to the same variable. For example, x += 5 is equivalent to x = x + 5, which adds 5 to the existing value of x and then assigns the new value to x.",
-    img: "",
-  },
-  {
-    question: "What is the difference between '=' and '-=' in Java?",
-    answer:
-      "The '=' operator assigns a value to a variable, while the '-=' operator subtracts a value from an existing value and then assigns the new value to the variable.",
-    explanation:
-      "The '=' operator is called the assignment operator and is used to assign a value to a variable. For example, x = 5 assigns the value 5 to the variable x. On the other hand, the '-=' operator is called the subtraction assignment operator and subtracts a value from the existing value of a variable and then assigns the new value to the same variable. For example, x -= 5 is equivalent to x = x - 5, which subtracts 5 from the existing value of x and then assigns the new value to x.",
-    img: "",
-  },
-  {
-    question: "What is the difference between '=' and '=' in Java?",
-    answer:
-      "The '=' operator is used to assign a value to a variable, while the '=' operator is used to multiply a variable by a value and then assign the result to the variable.",
-    explanation:
-      "The '=' operator is the standard assignment operator in Java, used to assign a value to a variable. On the other hand, the '*=' operator is a compound assignment operator that first multiplies the variable by the given value, and then assigns the result to the variable. For example, 'x *= 2' is equivalent to 'x = x * 2'.",
     img: "",
   },
   {
@@ -370,14 +293,6 @@ const operators = [
       "The '=' operator is used to assign a value to a variable, while the '/=' operator is used to divide a variable by a value and then assign the result to the variable.",
     explanation:
       "The '=' operator is the standard assignment operator in Java, used to assign a value to a variable. On the other hand, the '/=' operator is a compound assignment operator that first divides the variable by the given value, and then assigns the result to the variable. For example, 'x /= 2' is equivalent to 'x = x / 2'.",
-    img: "",
-  },
-  {
-    question: "What is the difference between '=' and '%=' in Java?",
-    answer:
-      "The '=' operator is used to assign a value to a variable, while the '%=' operator is used to get the remainder of a variable divided by a value and then assign the result to the variable.",
-    explanation:
-      "The '=' operator is the standard assignment operator in Java, used to assign a value to a variable. On the other hand, the '%=' operator is a compound assignment operator that first divides the variable by the given value, and then assigns the remainder to the variable. For example, 'x %= 2' is equivalent to 'x = x % 2'.",
     img: "",
   },
   {
@@ -410,33 +325,16 @@ const operators = [
   {
     question: 'What is the "-=" assignment operator in Java?',
     answer:
-      'The "-=" assignment operator in Java subtracts a value from a variable and assigns the result back to the variable.',
+      'Subtracts a value from a variable and assigns the result back to the variable.',
     explanation:
       'The "-=" assignment operator is a compound assignment operator in Java that subtracts the value on the right-hand side of the operator from the variable on the left-hand side, and then assigns the result back to the variable on the left-hand side. For example, the expression "x -= 5;" is equivalent to "x = x - 5;".',
     img: "",
   },
   {
     question:
-      'How do you use the "-=" assignment operator to subtract a value from a variable in Java?',
-    answer:
-      'You use the "-=" operator by placing it between the variable name and the value to be subtracted, and then placing a semicolon at the end of the statement.',
-    explanation:
-      'To subtract a value from a variable in Java using the "-=" assignment operator, you first write the name of the variable, followed by the "-=" operator, and then the value to be subtracted. For example, if you want to subtract the value 5 from the variable x, you would write "x -= 5;". This statement subtracts 5 from the value of x and assigns the result back to x.',
-    img: "",
-  },
-  {
-    question: 'What is the "=" assignment operator in Java?',
-    answer:
-      'The "=" assignment operator in Java multiplies a variable by a value and assigns the result back to the variable.',
-    explanation:
-      'The "=" assignment operator is a compound assignment operator in Java that multiplies the value on the right-hand side of the operator by the variable on the left-hand side, and then assigns the result back to the variable on the left-hand side. For example, the expression "x = 5;" is equivalent to "x = x * 5;".',
-    img: "",
-  },
-  {
-    question:
       'How do you use the "=" assignment operator to multiply a variable by a value in Java?',
     answer:
-      'You use the "=" operator by placing it between the variable name and the value to be multiplied, and then placing a semicolon at the end of the statement.',
+      'You use the "=" operator by placing it between the variable name and the value to be multiplied, and then placing a semicolon at the end of the statement. x *= 5',
     explanation:
       'To multiply a variable by a value in Java using the "=" assignment operator, you first write the name of the variable, followed by the "=" operator, and then the value to be multiplied. For example, if you want to multiply the variable x by the value 5, you would write "x *= 5;". This statement multiplies the value of x by 5 and assigns the result back to x.',
     img: "",

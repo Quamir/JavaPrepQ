@@ -7,13 +7,6 @@ const refernceDataTypes = [
     img: "",
   },
   {
-    question: "What is the default value of a reference data type?",
-    answer: "null",
-    explanation:
-      "The default value of a reference data type is null. When a reference data type variable is declared but not initialized, it will have a default value of null, indicating that it does not refer to any object in memory.",
-    img: "",
-  },
-  {
     question:
       "Which reference data type is used to store a sequence of characters?",
     answer: "String",
@@ -29,14 +22,6 @@ const refernceDataTypes = [
     img: "",
   },
   {
-    question:
-      "What is the main difference between a class and an interface in Java?",
-    answer: "A class can have implementation while an interface cannot",
-    explanation:
-      "The main difference between a class and an interface in Java is that a class can have implementation details (methods with a body), while an interface cannot. An interface only contains method signatures (method declarations without a body) that must be implemented by any class that implements the interface.",
-    img: "",
-  },
-  {
     question: "Are arrays in Java considered objects or primitive data types?",
     answer: "Objects",
     explanation:
@@ -48,13 +33,6 @@ const refernceDataTypes = [
     answer: "Object",
     explanation:
       "The base class for all classes in Java is the Object class. Every class in Java either directly or indirectly inherits from the Object class, which provides some common methods, such as toString(), equals(), and hashCode().",
-    img: "",
-  },
-  {
-    question: "How can you create a new instance of a class in Java?",
-    answer: 'Using the "new" keyword',
-    explanation:
-      'In Java, you can create a new instance of a class by using the "new" keyword followed by the class constructor. For example, MyClass obj = new MyClass(); creates a new instance of the MyClass class and assigns it to the variable obj.',
     img: "",
   },
   {
@@ -94,13 +72,6 @@ const refernceDataTypes = [
     answer: "Yes",
     explanation:
       "In Java, you can assign a String object to a variable of type Object because String is a subclass of Object. This is an example of polymorphism, where a subclass can be treated as an instance of its superclass.",
-    img: "",
-  },
-  {
-    question: "What is the Java keyword for implementing an interface?",
-    answer: "implements",
-    explanation:
-      'The "implements" keyword is used in Java when a class wants to implement an interface. The class must provide implementations for all the methods declared in the interface.',
     img: "",
   },
   {
@@ -175,15 +146,6 @@ const refernceDataTypes = [
     answer: "Using the final keyword",
     explanation:
       'In Java, you can declare a constant (immutable) variable by using the "final" keyword before the variable declaration. Once a final variable is assigned a value, it cannot be changed.',
-    img: "",
-  },
-  {
-    question:
-      "What is the difference between an ArrayList and a LinkedList in Java?",
-    answer:
-      "ArrayList is backed by an array, LinkedList is backed by a doubly-linked list",
-    explanation:
-      "The main difference between an ArrayList and a LinkedList in Java is their underlying data structure. ArrayList is backed by a dynamic array, while LinkedList is backed by a doubly-linked list. This impacts their performance characteristics: ArrayList provides fast random access, while LinkedList provides faster insertion and deletion at the beginning and end of the list.",
     img: "",
   },
   {

@@ -203,7 +203,7 @@ const stringHandling = [
   },
   {
     question: "Are string literals in Java mutable or immutable?",
-    answer: "String literals in Java are immutable.",
+    answer: "immutable.",
     explanation:
       "In Java, string literals are immutable, just like any other string objects created using the String class. This means that once a string literal is defined, its contents cannot be changed.",
     img: "",
@@ -264,14 +264,6 @@ const stringHandling = [
     answer: "int",
     explanation:
       "The compareTo() method in Java returns an integer value. This integer value is negative, zero, or positive if the first string is lexicographically less than, equal to, or greater than the second string, respectively.",
-    img: "",
-  },
-  {
-    question:
-      "How do you compare two strings lexicographically, ignoring case differences?",
-    answer: "Use the compareToIgnoreCase() method.",
-    explanation:
-      "The compareToIgnoreCase() method in Java compares two strings lexicographically, without considering their case. It returns a negative, zero, or positive integer if the first string is lexicographically less than, equal to, or greater than the second string, respectively, regardless of the case of the characters in the strings.",
     img: "",
   },
   {

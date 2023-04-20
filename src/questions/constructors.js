@@ -184,22 +184,6 @@ const constructors = [
     img: "",
   },
   {
-    question:
-      "How do you create a parameterized constructor with a variable number of arguments in Java?",
-    answer: "Use varargs (...) in the constructor parameter list",
-    explanation:
-      "In Java, to create a parameterized constructor with a variable number of arguments, you can use varargs (...) in the constructor parameter list. Varargs allows you to pass a variable number of arguments of the same type to the constructor. Inside the constructor, you can access these arguments as an array.",
-    img: "",
-  },
-  {
-    question:
-      "How do you ensure that an object is properly initialized when using multiple constructors?",
-    answer: "Use constructor chaining",
-    explanation:
-      'To ensure that an object is properly initialized when using multiple constructors in Java, you can use constructor chaining. Constructor chaining is a technique where one constructor calls another constructor within the same class using the "this()" keyword, or a superclass constructor using the "super()" keyword. This ensures that the object is initialized consistently, regardless of which constructor is called.',
-    img: "",
-  },
-  {
     question: "What are the best practices for using constructors in Java?",
     answer:
       "Keep constructors simple, avoid calling overridable methods, use constructor chaining, avoid excessive parameters",
@@ -220,7 +204,7 @@ const constructors = [
       "Can you create a constructor with default parameter values in Java?",
     answer: "No",
     explanation:
-      'Java does not support default parameter values for constructors or methods directly. However, you can achieve similar functionality by using constructor overloading, where you provide multiple constructors with different sets of parameters. A constructor with fewer parameters can call another constructor with more parameters, providing default values for the missing arguments using the "this()" keyword.',
+      'Java does not support default parameter values for constructors or methods directly. However, you can achieve similar functionality by using constructor oveCan you use a constructor to initialize static variables in Java?rloading, where you provide multiple constructors with different sets of parameters. A constructor with fewer parameters can call another constructor with more parameters, providing default values for the missing arguments using the "this()" keyword.',
     img: "",
   },
   {
@@ -229,13 +213,6 @@ const constructors = [
     answer: "Initialize all fields in the constructor and make them final",
     explanation:
       "To use a constructor to create an immutable object in Java, initialize all the fields of the object in the constructor and declare them as final. Making fields final ensures that their values cannot be changed once the object is constructed. Also, make sure to return defensive copies of any mutable objects stored as fields, and avoid exposing methods that can modify the object's internal state.",
-    img: "",
-  },
-  {
-    question: "How do you create an object with a private constructor in Java?",
-    answer: "Use a static factory method or the Singleton pattern",
-    explanation:
-      "To create an object with a private constructor in Java, you can use a static factory method or implement the Singleton pattern. A static factory method is a public static method within the class that instantiates the object and returns it. The Singleton pattern ensures that only one instance of a class exists by using a private constructor and a public static method to return the single instance of the class.",
     img: "",
   },
   {

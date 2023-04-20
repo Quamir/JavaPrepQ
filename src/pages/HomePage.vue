@@ -45,6 +45,15 @@ import classesAndReferenceDataTypes from "@/questions/classesAndReferenceDataTyp
 import creatingObjects from "@/questions/creatingObjects";
 import constructors from "@/questions/constructors";
 import strings from "@/questions/strings";
+import dotNotation from "@/questions/dotNotation";
+import encapsulation from "@/questions/encapsulation";
+import accessModifiers from "@/questions/accessModifiers";
+import interfaceJava from "@/questions/interface";
+import getters from "@/questions/getters";
+import setters from "@/questions/setters";
+import thisKeyword from "@/questions/thiskeyword";
+import wrapperClasses from "@/questions/wrapperClasses";
+import strings2 from "@/questions/strings2"
 
 export default {
   components: { BaseLink },
@@ -74,7 +83,16 @@ export default {
         classesAndReferenceDataTypes.length + 
         creatingObjects.length + 
         constructors.length +
-        strings.length
+        strings.length +
+        dotNotation.length +
+        encapsulation.length +
+        accessModifiers.length +
+        interfaceJava.length + 
+        getters.length + 
+        setters.length +
+        thisKeyword.length +
+        wrapperClasses.length +
+        strings2.length
 
     }
   },
