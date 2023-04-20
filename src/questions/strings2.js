@@ -31,15 +31,6 @@ const Strings2 = [
   },
   {
     question:
-      "How does the order of operands affect string concatenation in Java?",
-    answer:
-      "Once a string is encountered, the operands are concatenated from left to right.",
-    explanation:
-      "In Java, the order of operands matters for string concatenation. When using the + operator, operands are evaluated from left to right. Once a string is encountered, the remaining operands are converted to their string representation (if not already a string) and concatenated from left to right. If you have mixed data types, the order of operands can affect the final concatenated string and the overall behavior of the expression.",
-    img: "",
-  },
-  {
-    question:
       "What is the difference between using the + operator and the concat method for string concatenation in Java?",
     answer:
       "The + operator is more versatile, while the concat method only works with strings.",
@@ -84,7 +75,7 @@ const Strings2 = [
   },
   {
     question:
-      "Can you provide an example of using StringBuilder for string concatenation in Java?",
+      "What is an example of using StringBuilder for string concatenation in Java?",
     answer:
       'StringBuilder sb = new StringBuilder("Hello, "); sb.append("World!");',
     explanation:
@@ -220,7 +211,7 @@ const Strings2 = [
   },
   {
     question:
-      "Can you provide a basic example of using the String.format() method in Java?",
+      "What is a basic example of using the String.format() method in Java?",
     answer: 'String formattedString = String.format("Hello, %s!", "John");',
     explanation:
       'In this example, the format string contains a format specifier "%s" which is a placeholder for a string value. The second argument, "John", is the value that will replace the format specifier. The resulting formatted string is "Hello, John!".',
@@ -531,7 +522,7 @@ const Strings2 = [
   },
   {
     question:
-      "Can you provide an example of using a combination of flags with format specifiers in Java?",
+      "What is an example of using a combination of flags with format specifiers in Java?",
     answer: 'String.format("%+08.2f", 123.456);',
     explanation:
       'In this example, we use the following flags with a floating-point format specifier:\n\n1. "+" - Includes a sign (+ or -) with the output.\n2. "0" - Pads the output with zeros to fill the field width.\n3. "8" - Sets the field width to 8 characters.\n4. ".2" - Formats the number with 2 decimal places.\n\nThe resulting formatted string will be "+123.46", with zeros added to fill the field width.',
@@ -688,7 +679,7 @@ const Strings2 = [
   },
   {
     question:
-      "Can you provide a basic example of using the substring() method in Java?",
+      "What is a basic example of using the substring() method in Java?",
     answer:
       'String original = "Hello, World!"; String sub = original.substring(0, 5);',
     explanation:
@@ -794,14 +785,6 @@ const Strings2 = [
   },
   {
     question:
-      "Can you provide a basic example of using the indexOf() method to find the index of a character in a string?",
-    answer: "Yes.",
-    explanation:
-      "Here is a basic example:\n\nString text = \"Hello, world!\";\nint index = text.indexOf('o');\nSystem.out.println(index);\n\nThis code snippet will output 4, which is the index of the first occurrence of the character 'o' in the given string.",
-    img: "",
-  },
-  {
-    question:
       "How do you use the indexOf() method to find the index of a substring within a given string?",
     answer:
       "Call the indexOf() method on the string and pass the substring as an argument.",
@@ -824,14 +807,6 @@ const Strings2 = [
       "Call the indexOf() method on the string, passing the character or substring and the starting index as arguments.",
     explanation:
       "To use the indexOf() method to find the index of a specific character or substring starting from a given index, call the method on the string instance and pass the character or substring as the first argument and the starting index as the second argument. For example: string.indexOf('c', startIndex); or string.indexOf(\"substr\", startIndex);",
-    img: "",
-  },
-  {
-    question:
-      "Can you provide an example of using the indexOf() method with a starting index to find a character or substring within a string?",
-    answer: "Yes.",
-    explanation:
-      "Here is an example:\n\nString text = \"Hello, world!\";\nint startIndex = 5;\nint index = text.indexOf('o', startIndex);\nSystem.out.println(index);\n\nThis code snippet will output 8, which is the index of the first occurrence of the character 'o' in the given string after the specified starting index.",
     img: "",
   },
   {
@@ -895,14 +870,6 @@ const Strings2 = [
       "Find the index of the character or substring using indexOf(), then use substring() with the index to extract the desired portion of the string.",
     explanation:
       "To extract a portion of a string based on a specific character or substring, first find the index of the character or substring using the indexOf() method. Then, use the substring() method with the index to extract the desired portion of the string. For example:\n\nString text = \"Hello, world!\";\nint commaIndex = text.indexOf(',');\nString firstPart = text.substring(0, commaIndex);\n\nIn this example, we find the index of the comma character and extract the portion of the string before the comma.",
-    img: "",
-  },
-  {
-    question:
-      "Can you provide an example of using the indexOf() method to find the index of a substring within a larger string?",
-    answer: "Sure, here is an example:",
-    explanation:
-      'String sentence = "This is an example sentence with the word example.";\nString target = "example";\nint index = sentence.indexOf(target);\n\nIn this example, we search for the index of the substring "example" within the larger string "sentence". The indexOf() method will return the index of the first occurrence of the substring, which in this case is 11.',
     img: "",
   },
 ];

@@ -25,7 +25,7 @@ const getters = [
   },
   {
     question:
-      "Can you provide a simple example of a getter method for a private instance variable in Java?",
+      "What is a simple example of a getter method for a private instance variable in Java?",
     answer:
       "public class MyClass { private int myVar; public int getMyVar() { return myVar; } }",
     explanation:
@@ -65,7 +65,7 @@ const getters = [
   },
   {
     question:
-      "Can you provide an example of using a getter method to enforce validation on a private instance variable in Java?",
+      "What is an example of using a getter method to enforce validation on a private instance variable in Java?",
     answer:
       "public class MyClass { private int age; public int getAge() { return (age < 0) ? 0 : age; } }",
     explanation:

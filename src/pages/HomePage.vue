@@ -2,7 +2,7 @@
   <section>
     <div class="title">
       <h1 class="title__text">Java Practice Questions</h1>
-      <span class="title__sub-text">V1.2</span>
+      <span class="title__sub-text">V 2.0</span>
     </div>
     <div class="title__question-number">
       <span>{{numOfQuestions}} questions and growing</span>
@@ -10,12 +10,6 @@
     <div class="pages">
       <base-link linkPath="topics/qnotes" class="pages__link">
           <p class="pages__text">Q's Notes</p>
-      </base-link>
-      <base-link linkPath="question/terminal" class="pages__link">
-          <p class="pages__text">Q's Notes By Topic (AI Gen)</p>
-      </base-link>
-      <base-link linkPath="question/terminal" class="pages__link">
-          <p class="pages__text">ATA Topics List (AI Gen)</p>
       </base-link>
     </div>
   </section>

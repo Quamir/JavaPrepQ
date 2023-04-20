@@ -39,6 +39,7 @@ header {
     color: $secondary-color;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 20%;
 
     &:hover{

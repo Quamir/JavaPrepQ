@@ -52,6 +52,31 @@ export default {
         margin-bottom: 15px;
     
     }
+
+    @media(min-width: 1592px){
+        left: 1250px;
+    }
+    @media(min-width: 1643px){
+        left: 1300px;
+    }
+    @media(min-width: 1678px){
+        left: 1350px;
+    }
+    @media(min-width: 1736px){
+        left: 1400px;
+    }
+    @media(min-width: 1781px){
+        left: 1450px;
+    }
+    @media(min-width: 1845px){
+        left: 1500px;
+    }
+    @media(min-width: 1900px){
+        left: 1550px;
+    }
+    @media(min-width: 1950px){
+        left: 1600px;
+    }
 }
 
 .missed-questions{

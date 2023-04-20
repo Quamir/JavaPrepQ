@@ -81,7 +81,7 @@ const thisKeyword = [
   },
   {
     question:
-      "Can you provide an example of using the 'this' keyword to differentiate between instance variables and method parameters with the same name?",
+      "What is an example of using the 'this' keyword to differentiate between instance variables and method parameters with the same name?",
     answer: "class Example { int x; void setX(int x) { this.x = x; } }",
     explanation:
       'In this example, the "this" keyword is used to differentiate between the instance variable "x" and the method parameter "x" inside the "setX" method. By using "this.x = x;", we assign the value of the method parameter "x" to the instance variable "x" of the current object.',
@@ -114,7 +114,7 @@ const thisKeyword = [
   },
   {
     question:
-      "Can you provide an example of using the 'this' keyword to call a constructor with different parameters?",
+      "What is an example of using the 'this' keyword to call a constructor with different parameters?",
     answer:
       "class Example { int x, y; Example(int x) { this(x, 0); } Example(int x, int y) { this.x = x; this.y = y; } }",
     explanation:
@@ -135,23 +135,6 @@ const thisKeyword = [
     answer: "Yes.",
     explanation:
       'The "this" keyword can be used with abstract classes in Java. Even though an abstract class cannot be instantiated directly, it can still contain instance variables and non-abstract methods. The "this" keyword can be used within these non-abstract methods to refer to the current instance of the class and access its instance variables and methods.',
-    img: "",
-  },
-  {
-    question:
-      "Is the 'this' keyword specific to Java, or is it used in other programming languages as well?",
-    answer: "It is used in other programming languages as well.",
-    explanation:
-      'The "this" keyword is not specific to Java. It is also used in other object-oriented programming languages, such as C++, C#, and JavaScript. In these languages, the "this" keyword serves a similar purpose, referring to the current instance of the class and allowing access to its instance variables and methods.',
-    img: "",
-  },
-  {
-    question:
-      "How does the 'this' keyword behave when used within a lambda expression in Java?",
-    answer:
-      "It refers to the enclosing instance, not the lambda expression itself.",
-    explanation:
-      'In Java, when the "this" keyword is used within a lambda expression, it refers to the instance of the enclosing class, not the lambda expression itself. This is because lambda expressions in Java do not have their own "this" context. Instead, they inherit the "this" context from the enclosing instance, allowing you to access instance variables and methods of the enclosing class from within the lambda expression.',
     img: "",
   },
 ];

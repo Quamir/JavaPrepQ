@@ -25,7 +25,7 @@ const setters = [
   },
   {
     question:
-      "Can you provide a simple example of a setter method for an instance variable in Java?",
+      "What is a simple example of a setter method for an instance variable in Java?",
     answer:
       "public class MyClass { private int value; public void setValue(int value) { this.value = value; } }",
     explanation:

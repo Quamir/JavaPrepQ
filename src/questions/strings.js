@@ -128,13 +128,6 @@ const strings = [
     img: "",
   },
   {
-    question: "How do you iterate over the characters of a String in Java?",
-    answer: "Using a for loop, for-each loop, or Java streams.",
-    explanation:
-      "In Java, you can iterate over the characters of a String using a for loop, for-each loop, or Java streams. A for loop iterates over the indices of the String and uses the charAt() method to access each character. A for-each loop iterates over the characters by first converting the String to a char array using the toCharArray() method. Java streams can be used with the chars() method to create an IntStream of character codes, which can then be processed using various stream operations.",
-    img: "",
-  },
-  {
     question:
       "How do you convert a String to an integer or a floating-point number in Java?",
     answer:
@@ -153,9 +146,9 @@ const strings = [
   },
   {
     question:
-      "What is the String.format() method in Java, and how do you use it?",
+      "What is the String.format() method in Java used for",
     answer:
-      "The String.format() method is used for formatting strings with placeholders.",
+      "formatting strings with placeholders.",
     explanation:
       'In Java, the String.format() method is used to create formatted strings by replacing placeholders with specified values. It takes a format string containing placeholders (e.g., %s for strings, %d for integers, %f for floating-point numbers) and a list of arguments that replace the placeholders. The method returns a new formatted String object. For example, String.format("Hello, %s! You have %d messages.", name, messageCount) creates a string with the name and message count inserted at the specified placeholders.',
     img: "",
@@ -223,36 +216,12 @@ const strings = [
     img: "",
   },
   {
-    question: "How do you remove duplicate characters from a String in Java?",
-    answer: "Using a Set and StringBuilder.",
-    explanation:
-      "In Java, you can remove duplicate characters from a String by using a Set to track unique characters and a StringBuilder to build the result. Iterate through the characters of the original String, and for each character, check if it is in the Set. If it is not, add it to the Set and append it to the StringBuilder. Finally, convert the StringBuilder to a String to obtain the result with duplicate characters removed.",
-    img: "",
-  },
-  {
     question:
       "How do you count the number of vowels and consonants in a String in Java?",
     answer:
       "Using a loop to iterate through the characters and count vowels and consonants.",
     explanation:
       "In Java, you can count the number of vowels and consonants in a String by using a loop to iterate through the characters. Initialize vowel and consonant counts to zero. For each character, check if it is a vowel (a, e, i, o, or u, either uppercase or lowercase) and increment the vowel count if it is. If the character is an uppercase or lowercase letter and not a vowel, increment the consonant count. After iterating through the entire String, you will have the counts of vowels and consonants.",
-    img: "",
-  },
-  {
-    question:
-      "How do you find the first non-repeated character in a String in Java?",
-    answer:
-      "Using a LinkedHashMap to store character frequencies and iterating through the LinkedHashMap.",
-    explanation:
-      "In Java, you can find the first non-repeated character in a String by using a LinkedHashMap to store character frequencies. Iterate through the characters of the String and update the LinkedHashMap with their counts. Then, iterate through the LinkedHashMap and find the first character with a count of 1. LinkedHashMap preserves insertion order, so this character will be the first non-repeated character in the String.",
-    img: "",
-  },
-  {
-    question: "How do you check if a String is a palindrome in Java?",
-    answer:
-      "Using a loop to compare characters at opposite ends of the String.",
-    explanation:
-      "In Java, you can check if a String is a palindrome by using a loop to compare characters at opposite ends of the String. Initialize two indices, one at the beginning and one at the end of the String. Iterate through the String while comparing the characters at the two indices. If the characters are not equal, the String is not a palindrome. If the indices meet or cross each other, the String is a palindrome.",
     img: "",
   },
   {
@@ -269,24 +238,6 @@ const strings = [
       "Using a loop to iterate through the characters and count vowels and consonants.",
     explanation:
       "In Java, you can count the number of vowels and consonants in a String by using a loop to iterate through the characters. Initialize vowel and consonant counts to zero. For each character, check if it is a vowel (a, e, i, o, or u, either uppercase or lowercase) and increment the vowel count if it is. If the character is an uppercase or lowercase letter and not a vowel, increment the consonant count. After iterating through the entire String, you will have the counts of vowels and consonants.",
-    img: "",
-  },
-  {
-    question:
-      "How do you find the first non-repeated character in a String in Java?",
-    answer:
-      "Using a LinkedHashMap to store character frequencies and iterating through the LinkedHashMap.",
-    explanation:
-      "In Java, you can find the first non-repeated character in a String by using a LinkedHashMap to store character frequencies. Iterate through the characters of the String and update the LinkedHashMap with their counts. Then, iterate through the LinkedHashMap and find the first character with a count of 1. LinkedHashMap preserves insertion order, so this character will be the first non-repeated character in the String.",
-    img: "",
-  },
-  {
-    question:
-      "How do you find the most frequent character in a String in Java?",
-    answer:
-      "Using a HashMap to store character frequencies and iterating through the HashMap.",
-    explanation:
-      "In Java, you can find the most frequent character in a String by using a HashMap to store character frequencies. Iterate through the characters of the String and update the HashMap with their counts. Then, iterate through the HashMap to find the character with the highest count, which is the most frequent character in the String.",
     img: "",
   },
   {
@@ -294,20 +245,6 @@ const strings = [
     answer: "Using the getBytes() method.",
     explanation:
       "In Java, you can convert a String to a byte array by using the getBytes() method. This method returns a byte array containing the character sequence of the String in the default charset. Optionally, you can specify the charset as a parameter to the getBytes() method if you need to use a specific charset for the conversion.",
-    img: "",
-  },
-  {
-    question: "How do you convert a byte array to a String in Java?",
-    answer: "Using the String constructor.",
-    explanation:
-      "In Java, you can convert a byte array to a String by using the String constructor that takes a byte array as a parameter. This constructor creates a new String object by decoding the byte array using the default charset. Optionally, you can specify the charset as a second parameter to the String constructor if you need to use a specific charset for the conversion.",
-    img: "",
-  },
-  {
-    question: "How do you find the difference between two Strings in Java?",
-    answer: "Using a comparison algorithm like the Levenshtein distance.",
-    explanation:
-      "In Java, you can find the difference between two Strings by using a comparison algorithm like the Levenshtein distance. The Levenshtein distance is a measure of the number of single-character edits (insertions, deletions, or substitutions) required to transform one String into another. There are various libraries available in Java, such as Apache Commons Lang, that provide implementations of the Levenshtein distance algorithm.",
     img: "",
   },
   {

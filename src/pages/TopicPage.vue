@@ -2,7 +2,7 @@
     <section>
       <div class="title">
         <h1 class="title__text">Topics Page</h1>
-        <span class="title__sub-text">V1.2</span>
+        <span class="title__sub-text">V 2.0</span>
       </div>
       <div class="topics">
           <base-link 
