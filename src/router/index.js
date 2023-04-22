@@ -8,7 +8,8 @@ const router = createRouter({
     routes: [
         { path: '/', component: HomePage },
         { path: '/questions/:subject', component: QuestionPage},
-        { path: '/topics/:page', component: TopicPage}    
+        { path: '/topics/:page', component: TopicPage},
+        { path: '/topics/codingquestions', component: TopicPage}
     ]
 });
 

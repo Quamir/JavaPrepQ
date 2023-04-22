@@ -62,6 +62,18 @@ export default {
     },
     computed: {
         optionsArray() {
+            // Find the question with the correct answer
+            const questionWithAnswer = this.questions.find(q => q.answer === this.answer);
+
+            // If the question has an 'options' key, use the predefined options
+            if (questionWithAnswer && Object.prototype.hasOwnProperty.call(questionWithAnswer, 'options')) {
+                const options = questionWithAnswer.options.filter(option => option !== this.answer);
+                options.push(this.answer);
+                options.sort(() => Math.random() - 0.5);
+                return options;
+            }
+
+            // If the question does not have an 'options' key, generate random options
             let options = [];
             let tempquestions = this.questions.filter(q => q.answer !== this.answer);
             const uniqueRandomIndexes = this.getUniqueRandomIndexes(3, tempquestions.length - 1);
@@ -80,6 +92,7 @@ export default {
 
             return options;
         }
+
     },
     created() {
 
@@ -123,8 +136,8 @@ export default {
 
             if (wrongAnswerFound) {
                 return {
-                    questionNumber : this.questionNumber,
-                    location : this.$el.offsetTop
+                    questionNumber: this.questionNumber,
+                    location: this.$el.offsetTop
                 };
             } else {
                 return undefined;

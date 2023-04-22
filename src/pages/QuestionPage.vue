@@ -49,6 +49,7 @@ import setters from '@/questions/setters';
 import thisKeyword from '@/questions/thiskeyword';
 import wrapperClasses from '@/questions/wrapperClasses';
 import strings2 from '@/questions/strings2';
+import arrays1 from '@/questions/arrays1';
 
 export default {
     components: { QuestionCard, InfoPanel, jumpToQuestion },
@@ -223,6 +224,9 @@ export default {
                     break;
                 case 'strings2':
                     this.questions = strings2;
+                    break;
+                case 'arrays1':
+                    this.questions = arrays1;
                     break;
                 default:
                     console.error('Invalid test name: ', testName);

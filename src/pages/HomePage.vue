@@ -9,7 +9,10 @@
     </div>
     <div class="pages">
       <base-link linkPath="topics/qnotes" class="pages__link">
-          <p class="pages__text">Q's Notes</p>
+          <p class="pages__text">Q's Notes Java Theory </p>
+      </base-link>
+      <base-link linkPath="topics/codingquestions" class="pages__link">
+          <p class="pages__text">coding questions</p>
       </base-link>
     </div>
   </section>
@@ -48,6 +51,7 @@ import setters from "@/questions/setters";
 import thisKeyword from "@/questions/thiskeyword";
 import wrapperClasses from "@/questions/wrapperClasses";
 import strings2 from "@/questions/strings2"
+import arrays1 from "@/questions/arrays1";
 
 export default {
   components: { BaseLink },
@@ -86,7 +90,8 @@ export default {
         setters.length +
         thisKeyword.length +
         wrapperClasses.length +
-        strings2.length
+        strings2.length +
+        arrays1.length
 
     }
   },

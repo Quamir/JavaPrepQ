@@ -20,13 +20,6 @@ const terminal = [
     img: "",
   },
   {
-    question: "What does the single dot (.) represent in terminal commands?",
-    answer: "Current directory",
-    explanation:
-      "In terminal commands, the single dot (.) represents the current directory. It is used as a shorthand when referencing the directory you are currently in, for example, when using commands like ls or cd.",
-    img: "",
-  },
-  {
     question: "What does the cd command do?",
     answer: "Changes the current working directory",
     explanation:
@@ -73,14 +66,6 @@ const terminal = [
     answer: "Displays the manual page for a Unix command or system function",
     explanation:
       "The man (manual) command shows the manual page for a Unix command or system function, providing detailed documentation about its purpose, usage, options, and examples. This is useful for learning how to use a command correctly and efficiently, or for understanding the various options and parameters available.",
-    img: "",
-  },
-  {
-    question:
-      "What does the single dot (.) refer to when used in a terminal command?",
-    answer: "The directory you are currently in",
-    explanation:
-      'When you use the single dot (.) in a terminal command, it refers to the current directory. This allows for shorter and more convenient commands when referencing files or directories within the current directory, such as using "ls ." to list the contents of the current directory.',
     img: "",
   },
   {

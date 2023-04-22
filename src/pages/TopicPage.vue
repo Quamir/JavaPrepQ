@@ -22,12 +22,13 @@ import BaseLink from "../components/BaseLink.vue";
 import url from "../mixins/url"
 
 import qnotes from '../topicArrays/qnotes';
+import codingQuestions from '../topicArrays/codingQuestions';
 export default {
   components: { BaseLink },
   mixins: [url],
   data(){
     return{
-        topicsArray : []
+      topicsArray : []
     }
   },
   methods : {
@@ -36,6 +37,10 @@ export default {
       if(pageName == 'qnotes'){
           this.topicsArray = qnotes;
           return pageName;
+      }
+      if(pageName == 'codingquestions'){
+        this.topicsArray = codingQuestions;
+        return pageName;
       }
     },
   },
